@@ -57,6 +57,11 @@ public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
         jLabel4.setText("Weight");
 
         jComboBox_itemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Melee", "Ranged" }));
+        jComboBox_itemType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_itemTypeActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Gp");
 
@@ -210,6 +215,10 @@ public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
             System.out.println(item1.toString());
         }
     }//GEN-LAST:event_jButton_continueActionPerformed
+
+    private void jComboBox_itemTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_itemTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox_itemTypeActionPerformed
 
     /**
      * @param args the command line arguments
