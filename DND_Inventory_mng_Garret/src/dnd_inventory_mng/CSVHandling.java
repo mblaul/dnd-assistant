@@ -5,11 +5,9 @@
  */
 package dnd_inventory_mng;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
+import java.io.File;
+import java.util.Scanner;
 
 /**
  *
@@ -17,40 +15,17 @@ import java.io.IOException;
  */
 
 public class CSVHandling {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws FileNotFoundException {
+        Integer i = 0;
+        
         String appDir = System.getProperty("user.dir");
-        String csvFile = appDir + "/files/test.csv";
-        BufferedReader br = null;
-        String line = "";
-        String cvsSplitBy = ",";
-
-        try {
-
-            br = new BufferedReader(new FileReader(csvFile));
-            while ((line = br.readLine()) != null) {
-
-                // use comma as separator
-                String[] readFromFile = line.split(cvsSplitBy);
-
-                System.out.println(readFromFile[0]);
-
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+        String csvFile = appDir + "/src/dnd_inventory_mng/files/test.csv";
+        
+        Scanner scanner = new Scanner(new File(csvFile));
+        scanner.useDelimiter(",");
+        while(scanner.hasNext()){
+            System.out.print(scanner.next()+",");
         }
-
+        scanner.close();
     }
-    
 }

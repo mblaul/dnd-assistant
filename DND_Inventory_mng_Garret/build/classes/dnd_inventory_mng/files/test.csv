@@ -1,1 +1,3 @@
-"test","test1","test2","test3"
+itemid,desc,weight,dmg,dura,
+000001,Iron Dagger,5,15,98
+000002,Wooden Shield,10,0,98
