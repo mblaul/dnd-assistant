@@ -28,10 +28,11 @@ public class CSVHandling {
         try
         {
             //Reading the csv file
-            br = new BufferedReader(new FileReader("Items.csv"));
             
-            //Create List for holding Items objects
-            List<Items> itemList = new ArrayList<Items>();
+            br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"/src/dnd_inventory_mng/files/test.csv"));
+            
+            //Create List for holding Item objects
+            List<Item> itemList = new ArrayList<Item>();
             
             String line = "";
             //Read to skip the header
@@ -43,19 +44,19 @@ public class CSVHandling {
                 
                 if(itemDetails.length > 0 )
                 {
-                    //Save the employee details in Items object
-                    Items item = new Items(Integer.parseInt(itemDetails[0]),
-                            itemDetails[1],itemDetails[2],
+                    //Save the employee details in Item object
+                    Item itemTemp = new Item(Integer.parseInt(itemDetails[0]),
+                            itemDetails[1],Integer.parseInt(itemDetails[2]),
                             Integer.parseInt(itemDetails[3]));
-                    itemList.add(item);
+                    itemList.add(itemTemp);
                 }
             }
             
-            //Lets print the Items List
-            for(Items e : itemList)
+            //Lets print the Item List
+            for(Item e : itemList)
             {
-                System.out.println(e.getEmpId()+"   "+e.getFirstName()+"   "
-                		+e.getLastName()+"   "+e.getSalary());
+                System.out.println(e.getItemID()+"   "+e.getName()+"   "
+                		+e.getCost()+"   "+e.getWeight());
             }
         }
         catch(Exception ee)
