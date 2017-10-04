@@ -7,6 +7,7 @@ package dnd_inventory_mng;
 
 import java.io.FileNotFoundException;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -16,7 +17,8 @@ import java.util.Scanner;
 
 public class CSVHandling {
     public static void main(String[] args) throws FileNotFoundException {
-        Integer i = 0;
+        
+        ArrayList<ArrayList<String>> itemValueList = new ArrayList<ArrayList<String>>();
         
         String appDir = System.getProperty("user.dir");
         String csvFile = appDir + "/src/dnd_inventory_mng/files/test.csv";
