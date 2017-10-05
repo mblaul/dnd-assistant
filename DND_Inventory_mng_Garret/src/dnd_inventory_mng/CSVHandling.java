@@ -6,7 +6,9 @@
 package dnd_inventory_mng;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -76,8 +78,43 @@ public class CSVHandling {
         }
     }
     
-    public void writeToCSV(){
-        
+    public void writeToCSV() throws IOException{
+        BufferedReader br = null;
+        try
+        {
+            //Reading the csv file
+            br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"/src/dnd_inventory_mng/files/test.csv"));
+            //Create List for holding Item objects
+            List<Item> itemList = new ArrayList<Item>();
+            
+            String line = "";
+            //Read to skip the header
+            br.readLine();
+            //Reading from the second line
+            while((line = br.readLine()) != null){
+                
+            } 
+            
+        }        
+        catch(Exception ee)
+        {
+            ee.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                br.close();
+            }
+            catch(IOException ie)
+            {
+                System.out.println("Error occured while closing the BufferedReader");
+                ie.printStackTrace();
+            }
+        }
     }
+        
+        
+}
     
-}    
+    
