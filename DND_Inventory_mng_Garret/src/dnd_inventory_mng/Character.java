@@ -17,25 +17,6 @@ public class Character {
     public int intelligence;
     public int luck;
     
-    /*
-    
-    It would be cool to implement items as arrays of items so characters could 
-    carry multiple items as needed.
-    
-    public Item[] charHelmets; 
-    
-    I've forgetten the best way to delcare an array of objects but I think you 
-    can see the main idea. The result would be an expandable array of Items as
-    needed.
-    
-    charHelmets[n] = helm[0] , helm[1] , + ... + helm[n]
-    
-    A boolean field added to items could show whether or not the item was equipped.
-    Only one item in each catagory would be able to be equipped at once but many 
-    more items could be carried while not being equipped.
-     
-    */
-    
     // inventory items - these Item classes could be more specific ie helemt weapon etc
     public Item helm;
     public Item upper;
@@ -44,9 +25,10 @@ public class Character {
     public Item potion;
     public Item adventure;
         
-public Character(String n, int h, int m, int a, int s, int c, int i, int l, 
+public Character(int identifier, String n, int h, int m, int a, int s, int c, int i, int l, 
         Item he, Item up, Item lo, Item we, Item po, Item ad){
 
+    id = indentifer;
     name = n;
     health = h;
     magic = m;
@@ -65,8 +47,16 @@ public Character(String n, int h, int m, int a, int s, int c, int i, int l,
     
 }
 
-// name setters and getters
+// id setter and getter
+public int getId(){
+    return id;
+}
 
+public void setId(){
+    id = identifier;
+}
+
+// name setters and getters
 public String getName(){
     return name;
 }
