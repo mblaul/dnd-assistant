@@ -52,6 +52,11 @@ public class weaponlist_modifier_melee extends javax.swing.JFrame {
         jButton_save.setText("Save Item");
 
         jButton_exit.setText("Exit");
+        jButton_exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_exitActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Melee weapon properties");
 
@@ -182,6 +187,12 @@ public class weaponlist_modifier_melee extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed
+        weaponlist_modifier_melee m = new weaponlist_modifier_melee();
+        super.dispose();
+        m.setVisible(false);
+    }//GEN-LAST:event_jButton_exitActionPerformed
 
     /**
      * @param args the command line arguments

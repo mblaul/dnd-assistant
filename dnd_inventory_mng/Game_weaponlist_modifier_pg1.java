@@ -189,7 +189,9 @@ public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
         int costT;
         int weightT;
     private void jButton_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitActionPerformed
-       System.exit(0);
+       Game_weaponlist_modifier_pg1 g = new Game_weaponlist_modifier_pg1();
+       super.dispose();
+       g.setVisible(false);
     }//GEN-LAST:event_jButton_quitActionPerformed
 
     private void jButton_addNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addNameActionPerformed
