@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+itemid,desc,weight,dmg,dura,
+000001,Iron Dagger,5,15,98
+000002,Wooden Shield,10,0,98
+=======
 “header1”,”header2”,”header3”,”header4”
 001,War Hammer,500,1
 002,Iron Dagger,550,2
 003,Leather Helmet,600,3
+>>>>>>> 8d7a192680ca300b987c8369cd24379283cfbc40

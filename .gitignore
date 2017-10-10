@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 
 *.xml
+=======
+
+.DS_Store
+.DS_Store
+*.class
+*.class
+>>>>>>> a80a42b1ae1df6006d33ac60aa98adc6f955c23d
