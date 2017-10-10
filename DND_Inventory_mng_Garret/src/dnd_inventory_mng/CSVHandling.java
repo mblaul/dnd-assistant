@@ -49,7 +49,7 @@ public class CSVHandling {
                 
                 if(itemDetails.length > 0 )
                 {
-                    //Save the employee details in Item object
+                    //Save the item details in Item object
                     Item itemTemp = new Item(Integer.parseInt(itemDetails[0]),
                             itemDetails[1],Integer.parseInt(itemDetails[2]),
                             Integer.parseInt(itemDetails[3]));
