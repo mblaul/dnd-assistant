@@ -7,9 +7,13 @@ package dnd_inventory_mng;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.PrintWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException
+
 
 
 /**
@@ -21,15 +25,16 @@ public class CSVHandling {
    
     //Delimiters used in the CSV file
     private static final String COMMA_DELIMITER = ",";
+    private static final String ITEM_FILE_DIR = System.getProperty("user.dir")+"/src/dnd_inventory_mng/files/test.csv";
     
-    readFromCSV();
+    
     public void readFromCSV(){
         BufferedReader br = null;
         try
         {
             //Reading the csv file
             
-            br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"/src/dnd_inventory_mng/files/test.csv"));
+            br = new BufferedReader(new FileReader(ITEM_FILE_DIR));
             
             //Create List for holding Item objects
             List<Item> itemList = new ArrayList<Item>();
@@ -77,10 +82,24 @@ public class CSVHandling {
         }
     }
     
-    public void writeToCSV(){
+    public void writeToCSV() throws FileNotFoundException{
+        PrintWriter pw = new PrintWriter(new File(ITEM_FILE_DIR));
+        StringBuilder sb = new StringBuilder();
         
         
-        
+        sb.append("id");
+        sb.append(',');
+        sb.append("Name");
+        sb.append('\n');
+
+        sb.append("1");
+        sb.append(',');
+        sb.append("Prashant Ghimire");
+        sb.append('\n');
+
+        pw.write(sb.toString());
+        pw.close();
+        System.out.println("done!");    
     }
     
 }    
