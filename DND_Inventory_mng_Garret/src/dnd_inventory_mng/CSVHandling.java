@@ -22,6 +22,7 @@ public class CSVHandling {
     //Delimiters used in the CSV file
     private static final String COMMA_DELIMITER = ",";
     
+    readFromCSV();
     public void readFromCSV(){
         BufferedReader br = null;
         try
