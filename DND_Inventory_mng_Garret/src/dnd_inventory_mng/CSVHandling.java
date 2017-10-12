@@ -34,10 +34,18 @@ public class CSVHandling {
         {
             //Reading the csv file
             
+            String itemType = "";
+            
             br = new BufferedReader(new FileReader(ITEM_FILE_DIR));
             
             //Create List for holding Item objects
             List<Item> itemList = new ArrayList<Item>();
+            List<Armor> armorItemList = new ArrayList<Armor>();
+            List<Melee> meleeItemList = new ArrayList<Melee>();
+            List<Ranged> rangedItemList = new ArrayList<Ranged>();
+            List<Potion> potionItemList = new ArrayList<Potion>();
+            List<Adventure> adventureItemList = new ArrayList<Adventure>();
+
             
             String line = "";
             //Read to skip the header
@@ -49,11 +57,47 @@ public class CSVHandling {
                 
                 if(itemDetails.length > 0 )
                 {
-                    //Save the item details in Item object
-                    Item itemTemp = new Item(Integer.parseInt(itemDetails[0]),
-                            itemDetails[1],Integer.parseInt(itemDetails[2]),
-                            Integer.parseInt(itemDetails[3]));
-                    itemList.add(itemTemp);
+                    switch(itemType){
+                        case "Armor": itemType = "Armor";
+                        //Save the item details in Armor object
+                        Armor itemTemp = new Armor(Integer.parseInt(itemDetails[0]),
+                                itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]));
+                        itemList.add(itemTemp);
+                        
+                        case "Melee": itemType = "Melee";
+                        //Save the item details in Melee object
+                        Melee itemTemp = new Melee(Integer.parseInt(itemDetails[0]),
+                                itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),
+                                Integer.parseInt(itemDetails[5]),Integer.parseInt(itemDetails[6]));
+                        itemList.add(itemTemp);
+                        
+                        case "Ranged": itemType = "Ranged";
+                        //Save the item details in Melee object
+                        Ranged itemTemp = new Ranged(Integer.parseInt(itemDetails[0]),
+                                itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),
+                                Integer.parseInt(itemDetails[5]),Integer.parseInt(itemDetails[6]));
+                        itemList.add(itemTemp);
+                        
+                        case "Potion": itemType = "Potion";
+                        //Save the item details in Potion object
+                        Potion itemTemp = new Potion(Integer.parseInt(itemDetails[0]),
+                                itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                Double.parseDouble(itemDetails[3]),Boolean.parseBoolean(itemDetails[4]));
+                        itemList.add(itemTemp);
+                        
+                        case "Adventure": itemType = "Adventure";
+                        //Save the item details in Adventure object
+                        Adventure itemTemp = new Adventure(Integer.parseInt(itemDetails[0]),
+                                itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                Double.parseDouble(itemDetails[3]),Boolean.parseBoolean(itemDetails[4]));
+                        itemList.add(itemTemp);
+                        
+                        
+                        
+                    }
                 }
             }
             
@@ -81,6 +125,7 @@ public class CSVHandling {
             }
         }
     }
+    
     
     public void writeToCSV() throws FileNotFoundException{
         PrintWriter pw = new PrintWriter(new File(ITEM_FILE_DIR));
