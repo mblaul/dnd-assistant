@@ -58,7 +58,7 @@ public class CSVHandling {
                 if(itemDetails.length > 0 )
                 {
                     switch(itemType){
-                        case "Armor": itemType = "Armor";
+                        case "Armor":
                         //Save the item details in Armor object
                         Armor itemTemp = new Armor(Integer.parseInt(itemDetails[0]),
                                 itemDetails[1],Integer.parseInt(itemDetails[2]),
@@ -74,7 +74,7 @@ public class CSVHandling {
                         itemList.add(itemTemp);
                         
                         case "Ranged": itemType = "Ranged";
-                        //Save the item details in Melee object
+                        //Save the item details in Ranged object
                         Ranged itemTemp = new Ranged(Integer.parseInt(itemDetails[0]),
                                 itemDetails[1],Integer.parseInt(itemDetails[2]),
                                 Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),
