@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
-import java.io.FileNotFoundException
+import java.io.FileNotFoundException;
 
 
 
@@ -25,88 +25,109 @@ public class CSVHandling {
    
     //Delimiters used in the CSV file
     private static final String COMMA_DELIMITER = ",";
-    private static final String ITEM_FILE_DIR = System.getProperty("user.dir")+"/src/dnd_inventory_mng/files/test.csv";
+    private static final String ITEM_FILE_DIR = System.getProperty("user.dir")+"/src/dnd_inventory_mng/files/";
     
+    String[] itemType = {"Armor","Melee","Ranged","Potion","Adventure"};
+    List<Item> itemList = new ArrayList<Item>();
+    List<Armor> armorItemList = new ArrayList<Armor>();
+    List<Melee> meleeItemList = new ArrayList<Melee>();
+    List<Ranged> rangedItemList = new ArrayList<Ranged>();
+    List<Potion> potionItemList = new ArrayList<Potion>();
+    List<Adventure> adventureItemList = new ArrayList<Adventure>();
     
     public void readFromCSV(){
         BufferedReader br = null;
+        
         try
         {
-            //Reading the csv file
-            
-            String itemType = "";
-            
-            br = new BufferedReader(new FileReader(ITEM_FILE_DIR));
-            
-            //Create List for holding Item objects
-            List<Item> itemList = new ArrayList<Item>();
-            List<Armor> armorItemList = new ArrayList<Armor>();
-            List<Melee> meleeItemList = new ArrayList<Melee>();
-            List<Ranged> rangedItemList = new ArrayList<Ranged>();
-            List<Potion> potionItemList = new ArrayList<Potion>();
-            List<Adventure> adventureItemList = new ArrayList<Adventure>();
-
-            
-            String line = "";
-            //Read to skip the header
-            br.readLine();
-            //Reading from the second line
-            while ((line = br.readLine()) != null) 
-            {
-                String[] itemDetails = line.split(COMMA_DELIMITER);
+            for(int i = 0; i+1 <= itemType.length; i++){
+                String itemTypeFile = ITEM_FILE_DIR + itemType[i] + ".csv";
+                String itemCase = itemType[i];
                 
-                if(itemDetails.length > 0 )
+                //Opening the individual csv files
+                br = new BufferedReader(new FileReader(itemTypeFile));
+
+                //Create List for holding Item objects
+                
+
+                String line = "";
+                //Read to skip the header
+                br.readLine();
+                //Reading from the second line
+                while ((line = br.readLine()) != null) 
                 {
-                    switch(itemType){
-                        case "Armor":
-                        //Save the item details in Armor object
-                        Armor itemTemp = new Armor(Integer.parseInt(itemDetails[0]),
-                                itemDetails[1],Integer.parseInt(itemDetails[2]),
-                                Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]));
-                        itemList.add(itemTemp);
-                        
-                        case "Melee": itemType = "Melee";
-                        //Save the item details in Melee object
-                        Melee itemTemp = new Melee(Integer.parseInt(itemDetails[0]),
-                                itemDetails[1],Integer.parseInt(itemDetails[2]),
-                                Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),
-                                Integer.parseInt(itemDetails[5]),Integer.parseInt(itemDetails[6]));
-                        itemList.add(itemTemp);
-                        
-                        case "Ranged": itemType = "Ranged";
-                        //Save the item details in Ranged object
-                        Ranged itemTemp = new Ranged(Integer.parseInt(itemDetails[0]),
-                                itemDetails[1],Integer.parseInt(itemDetails[2]),
-                                Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),
-                                Integer.parseInt(itemDetails[5]),Integer.parseInt(itemDetails[6]));
-                        itemList.add(itemTemp);
-                        
-                        case "Potion": itemType = "Potion";
-                        //Save the item details in Potion object
-                        Potion itemTemp = new Potion(Integer.parseInt(itemDetails[0]),
-                                itemDetails[1],Integer.parseInt(itemDetails[2]),
-                                Double.parseDouble(itemDetails[3]),Boolean.parseBoolean(itemDetails[4]));
-                        itemList.add(itemTemp);
-                        
-                        case "Adventure": itemType = "Adventure";
-                        //Save the item details in Adventure object
-                        Adventure itemTemp = new Adventure(Integer.parseInt(itemDetails[0]),
-                                itemDetails[1],Integer.parseInt(itemDetails[2]),
-                                Double.parseDouble(itemDetails[3]),Boolean.parseBoolean(itemDetails[4]));
-                        itemList.add(itemTemp);
-                        
-                        
-                        
+                    String[] itemDetails = line.split(COMMA_DELIMITER);
+
+                    if(itemDetails.length > 0 )
+                    {
+                        switch(itemCase){
+                            
+                            case "Armor":
+                            //Add the item details in Armor object
+                            Armor itemTemp0 = new Armor(Integer.parseInt(itemDetails[0]),
+                                    itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                    Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]));
+                            armorItemList.add(itemTemp0);
+                            break;
+                            
+                            case "Melee":
+                            //Add the item details in Melee object
+                            Melee itemTemp1 = new Melee(Integer.parseInt(itemDetails[0]),
+                                    itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                    Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),
+                                    Integer.parseInt(itemDetails[5]),Integer.parseInt(itemDetails[6]));
+                            meleeItemList.add(itemTemp1);
+                            break;
+                            
+                            case "Ranged":
+                            //Add the item details in Ranged object
+                            Ranged itemTemp2 = new Ranged(Integer.parseInt(itemDetails[0]),
+                                    itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                    Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),
+                                    Integer.parseInt(itemDetails[5]),Integer.parseInt(itemDetails[6]));
+                            rangedItemList.add(itemTemp2);
+                            break;
+                            
+                            case "Potion":
+                            //Add the item details in Potion object
+                            Potion itemTemp3 = new Potion(Integer.parseInt(itemDetails[0]),
+                                    itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                    Double.parseDouble(itemDetails[3]),Boolean.parseBoolean(itemDetails[4]));
+                            potionItemList.add(itemTemp3);
+                            break;
+                            
+                            case "Adventure":
+                            //Add the item details in Adventure object
+                            Adventure itemTemp4 = new Adventure(Integer.parseInt(itemDetails[0]),
+                                    itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                    Double.parseDouble(itemDetails[3]),Boolean.parseBoolean(itemDetails[4]));
+                            adventureItemList.add(itemTemp4);
+                            break;
+                        }        
                     }
                 }
             }
-            
+
             //Lets print the Item List
-            for(Item e : itemList)
+            for(Armor e : armorItemList)
             {
                 System.out.println(e.getItemID()+"   "+e.getName()+"   "
-                		+e.getCost()+"   "+e.getWeight());
+                                +e.getCost()+"   "+e.getWeight()+"   "
+                                +e.getDefense());
             }
+            for(Melee e : meleeItemList)
+            {
+                System.out.println(e.getItemID()+"   "+e.getName()+"   "
+                                +e.getCost()+"   "+e.getWeight()+"   "
+                                +e.getStrength()+"   "+e.getStamina());
+            }
+            for(Ranged e : rangedItemList)
+            {
+                System.out.println(e.getItemID()+"   "+e.getName()+"   "
+                                +e.getCost()+"   "+e.getWeight()+"   "
+                                +e.getRange()+"   "+e.getStamina());
+            }
+            
         }
         catch(Exception ee)
         {
@@ -146,5 +167,4 @@ public class CSVHandling {
         pw.close();
         System.out.println("done!");    
     }
-    
 }    

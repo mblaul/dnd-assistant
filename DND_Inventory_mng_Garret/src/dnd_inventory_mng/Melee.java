@@ -9,7 +9,7 @@ package dnd_inventory_mng;
  *
  * @author duroj
  */
-public class Melee extends Item {
+public class Melee extends Weapon {
     private int str;
     private int sta;
 
@@ -17,25 +17,25 @@ public class Melee extends Item {
         super();
     }
 
-    public Melee(int id,String name,int cost,double weight, int strength, int stamina){
-        super(id,name,cost,weight);
+    public Melee(int id,String name,int cost,double weight,int attack, int strength, int stamina){
+        super(id,name,cost,weight,attack);
         str = strength;
         sta = stamina;
     }
 
-    public int getStr() {
+    public int getStrength() {
         return str;
     }
 
-    public void setStr(int str) {
+    public void setStrength(int str) {
         this.str = str;
     }
 
-    public int getSta() {
+    public int getStamina() {
         return sta;
     }
 
-    public void setSta(int sta) {
+    public void setStamina(int sta) {
         this.sta = sta;
     }
 
@@ -45,16 +45,6 @@ public class Melee extends Item {
     public String toString(){
         return "Item: "+getName()+
                 "\nCost: "+getCost()+"gp"+
-                "\nWeight: "+getWeight()+"lbs"+
-                "\nWielded: "+getNumHand()+
-                "\nMartial weapon: "+ getMartial()+
-                "\nLight: "+getLight()+
-                "\nHeavy: "+getHeavy()+
-                "\nFinesse: "+getFinesse()+
-                "\nSilvered: "+getSilvered()+
-                "\nDamage Type: "+
-                getNumDies()+"d"+getDieType()+" "+getDMGtype()+" damage"+
-                "\nThrown: "+getThrown()+
-                "\nReach: "+getReach();
+                "\nWeight: "+getWeight()+"lbs";
     }
 }

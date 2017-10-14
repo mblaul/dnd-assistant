@@ -9,7 +9,7 @@ package dnd_inventory_mng;
  *
  * @author duroj
  */
-public class Ranged extends Item {
+public class Ranged extends Weapon {
     private int rng;
     private int sta;
 
@@ -17,8 +17,8 @@ public class Ranged extends Item {
         super();
     }
 
-    public Ranged(int id,String name,int cost,double weight, int range, int stamina){
-        super(id,name,cost,weight);
+    public Ranged(int id,String name,int cost,double weight,int attack,int range,int stamina){
+        super(id,name,cost,weight,attack);
         rng = range;
         sta = stamina;
     }
@@ -38,21 +38,12 @@ public class Ranged extends Item {
     public void setStamina(int sta) {
         this.sta = sta;
     }
-@Override
-public String toString(){
-    return "Item: "+getName()+
-            "\nCost: "+getCost()+"gp"+
-            "\nWeight: "+getWeight()+"lbs"+
-            "\nWielded: "+getNumHand()+
-            "\nMartial weapon: "+ getMartial()+
-            "\nLight: "+getLight()+
-            "\nHeavy: "+getHeavy()+
-            "\nFinesse: "+getFinesse()+
-            "\nSilvered: "+getSilvered()+
-            "\nDamage Type: "+
-            getNumDies()+"d"+getDieType()+" "+getDMGtype()+" damage"+
-            "\nAmmunition Type: "+getAmType()+
-            "\nRange- Minimum: "+getRangeMin()+" Maximum: "+getRangeMax();
-}
+    
+    @Override
+        public String toString(){
+            return "Item: "+getName()+
+                    "\nCost: "+getCost()+"gp"+
+                    "\nWeight: "+getWeight()+"lbs";
+        }
 }
 
