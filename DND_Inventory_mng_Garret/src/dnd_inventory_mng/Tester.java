@@ -13,6 +13,7 @@ public class Tester {
     public static void main(String[] args){
         CSVHandling reader = new CSVHandling();
         reader.readFromCSV();
+        
     
     }
     

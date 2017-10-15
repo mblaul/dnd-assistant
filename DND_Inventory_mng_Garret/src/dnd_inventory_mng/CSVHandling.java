@@ -128,6 +128,9 @@ public class CSVHandling {
                                 +e.getRange()+"   "+e.getStamina());
             }
             
+            //Example of how to look up the name of an item.
+            System.out.println(meleeItemList.get(1).getName());
+            
         }
         catch(Exception ee)
         {
