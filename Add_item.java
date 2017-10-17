@@ -6,17 +6,24 @@
 package dnd_inventory_mng;
 
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
 
 /**
  *
  * @author duroj
  */
-public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
+public class Add_item extends javax.swing.JFrame {
 
     /**
      * Creates new form Game_weaponlist_modifier
      */
-    public Game_weaponlist_modifier_pg1() {
+    public Add_item() {
         initComponents();
     }
 
@@ -60,7 +67,7 @@ public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
 
         jLabel5.setText("Gp");
 
-        jButton_quit.setText("Exit");
+        jButton_quit.setText("Close");
         jButton_quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_quitActionPerformed(evt);
@@ -189,7 +196,9 @@ public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
         int costT;
         int weightT;
     private void jButton_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitActionPerformed
-       System.exit(0);
+       Add_item g = new Add_item();
+       super.dispose();
+       g.setVisible(false);
     }//GEN-LAST:event_jButton_quitActionPerformed
 
     private void jButton_addNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addNameActionPerformed
@@ -206,16 +215,16 @@ public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
 
     private void jButton_continueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_continueActionPerformed
         if(this.jComboBox_itemType.getSelectedItem()=="Melee"){
-            Game_weaponlist_modifier_pg1 p = new Game_weaponlist_modifier_pg1();
+            Add_item p = new Add_item();
             super.dispose();
             p.setVisible(false);
-            weaponlist_modifier_melee w = new weaponlist_modifier_melee();
+            Add_melee w = new Add_melee();
             w.setVisible(true);   
         } else if(this.jComboBox_itemType.getSelectedItem()=="Ranged"){
-            Game_weaponlist_modifier_pg1 p = new Game_weaponlist_modifier_pg1();
+            Add_item p = new Add_item();
             super.dispose();
             p.setVisible(false);
-            weaponlist_modifier_ranged r = new weaponlist_modifier_ranged();
+            Add_ranged r = new Add_ranged();
             r.setVisible(true);   
     }
     }//GEN-LAST:event_jButton_continueActionPerformed
@@ -237,21 +246,23 @@ public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Game_weaponlist_modifier_pg1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Add_item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Game_weaponlist_modifier_pg1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Add_item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Game_weaponlist_modifier_pg1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Add_item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Game_weaponlist_modifier_pg1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Add_item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Game_weaponlist_modifier_pg1().setVisible(true);
+                new Add_item().setVisible(true);
             }
         });
     }
