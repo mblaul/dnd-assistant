@@ -48,8 +48,6 @@ public class CSVHandling {
                 br = new BufferedReader(new FileReader(itemTypeFile));
 
                 //Create List for holding Item objects
-                
-
                 String line = "";
                 //Read to skip the header
                 br.readLine();
