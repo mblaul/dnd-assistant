@@ -10,7 +10,6 @@ package dnd_inventory_mng;
  * @author duroj
  */
 public class Item {
-    private int id;
     private String name ="";
     private int cost;
     private double weight;
@@ -18,20 +17,11 @@ public class Item {
 public Item(){
     name="unknown";
 }    
-public Item(int i,String n,int c,double w){
-    id=i;
+public Item(String n,int c,double w){
     name=n;
     cost=c;
     weight=w;
 }
-
-public int getItemID(){
-    return id;
-}
-public void setItemID(int newID){
-    id=newID;
-}
-
 public String getName(){
     return name;
 }
