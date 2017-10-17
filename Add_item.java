@@ -67,7 +67,7 @@ public class Add_item extends javax.swing.JFrame {
 
         jLabel5.setText("Gp");
 
-        jButton_quit.setText("Exit");
+        jButton_quit.setText("Close");
         jButton_quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_quitActionPerformed(evt);

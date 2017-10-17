@@ -30,15 +30,33 @@ public class Start_screen extends javax.swing.JFrame {
         jButton_load = new javax.swing.JButton();
         jButton_new = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton_quit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton_load.setText("Load Game");
+        jButton_load.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_loadActionPerformed(evt);
+            }
+        });
 
         jButton_new.setText("Start New Game");
+        jButton_new.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_newActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Serif", 2, 48)); // NOI18N
         jLabel1.setText("Table-Top Titan");
+
+        jButton_quit.setText("Quit");
+        jButton_quit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_quitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -47,13 +65,17 @@ public class Start_screen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addComponent(jButton_new, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton_load, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
             .addGroup(layout.createSequentialGroup()
-                .addGap(263, 263, 263)
+                .addGap(186, 186, 186)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton_quit)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -64,11 +86,31 @@ public class Start_screen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_new, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_load, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(130, 130, 130))
+                .addGap(93, 93, 93)
+                .addComponent(jButton_quit)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_newActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_newActionPerformed
+
+        super.dispose();
+        Menu_screen m = new Menu_screen();
+        m.setVisible(true);
+    }//GEN-LAST:event_jButton_newActionPerformed
+
+    private void jButton_loadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_loadActionPerformed
+
+        super.dispose();
+        Menu_screen m = new Menu_screen();
+        m.setVisible(true);
+    }//GEN-LAST:event_jButton_loadActionPerformed
+
+    private void jButton_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton_quitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,6 +150,7 @@ public class Start_screen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_load;
     private javax.swing.JButton jButton_new;
+    private javax.swing.JButton jButton_quit;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

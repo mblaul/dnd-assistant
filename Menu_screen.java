@@ -143,7 +143,9 @@ public class Menu_screen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitActionPerformed
-        System.exit(0);
+        super.dispose();
+        Start_screen s = new Start_screen();
+        s.setVisible(true);
     }//GEN-LAST:event_jButton_quitActionPerformed
 
     private void jButton_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_saveActionPerformed

@@ -51,7 +51,7 @@ public class Add_melee extends javax.swing.JFrame {
 
         jButton_save.setText("Save Item");
 
-        jButton_exit.setText("Exit");
+        jButton_exit.setText("Close");
         jButton_exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_exitActionPerformed(evt);
@@ -189,9 +189,9 @@ public class Add_melee extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed
-        Add_melee m = new Add_melee();
+        
         super.dispose();
-        m.setVisible(false);
+       
     }//GEN-LAST:event_jButton_exitActionPerformed
 
     /**

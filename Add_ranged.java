@@ -53,7 +53,12 @@ public class Add_ranged extends javax.swing.JFrame {
 
         jButton_save.setText("Save Item");
 
-        jButton_exit.setText("Exit");
+        jButton_exit.setText("Close");
+        jButton_exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_exitActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Ranged weapon properties");
 
@@ -199,6 +204,9 @@ public class Add_ranged extends javax.swing.JFrame {
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed
+        super.dispose();    }//GEN-LAST:event_jButton_exitActionPerformed
 
     /**
      * @param args the command line arguments
