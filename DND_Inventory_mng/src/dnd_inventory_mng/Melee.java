@@ -10,46 +10,41 @@ package dnd_inventory_mng;
  * @author duroj
  */
 public class Melee extends Weapon {
-    private boolean thrown;
-    private boolean reach;
-public Melee(){
-    super();
-}
+    private int str;
+    private int sta;
 
-public Melee(String name,int cost,double weight, int damageType,int dieType,
-              int numDies,int handed,boolean martial,boolean light,boolean heavy,
-              boolean finesse,boolean silvered,boolean th,boolean re){
-    super(name,cost,weight,damageType,dieType,numDies,handed,martial,light,
-            heavy,finesse,silvered);
-            thrown=th;
-            reach=re;
-}
-public boolean getThrown(){
-    return thrown;
-}
-public void setThrown(boolean newThrown){
-    thrown=newThrown;
-}
-public boolean getReach(){
-    return reach;
-}
-public void setReach(boolean newReach){
-    reach=newReach;
-}
-@Override
-public String toString(){
-    return "Item: "+getName()+
-            "\nCost: "+getCost()+"gp"+
-            "\nWeight: "+getWeight()+"lbs"+
-            "\nWielded: "+getNumHand()+
-            "\nMartial weapon: "+ getMartial()+
-            "\nLight: "+getLight()+
-            "\nHeavy: "+getHeavy()+
-            "\nFinesse: "+getFinesse()+
-            "\nSilvered: "+getSilvered()+
-            "\nDamage Type: "+
-            getNumDies()+"d"+getDieType()+" "+getDMGtype()+" damage"+
-            "\nThrown: "+getThrown()+
-            "\nReach: "+getReach();
-}
+    public Melee(){
+        super();
+    }
+
+    public Melee(int id,String name,int cost,double weight,int attack, int strength, int stamina){
+        super(id,name,cost,weight,attack);
+        str = strength;
+        sta = stamina;
+    }
+
+    public int getStrength() {
+        return str;
+    }
+
+    public void setStrength(int str) {
+        this.str = str;
+    }
+
+    public int getStamina() {
+        return sta;
+    }
+
+    public void setStamina(int sta) {
+        this.sta = sta;
+    }
+
+
+
+    @Override
+    public String toString(){
+        return "Item: "+getName()+
+                "\nCost: "+getCost()+"gp"+
+                "\nWeight: "+getWeight()+"lbs";
+    }
 }
