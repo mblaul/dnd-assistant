@@ -2,6 +2,9 @@ package dnd_inventory_mng;
 
 public class Character {
     
+    // defined during object creation
+    public int id;
+    
     // entered by user
     public String name;
     
@@ -14,36 +17,20 @@ public class Character {
     public int intelligence;
     public int luck;
     
-    /*
-    
-    It would be cool to implement items as arrays of items so characters could 
-    carry multiple items as needed.
-    
-    public Item[] charHelmets; 
-    
-    I've forgetten the best way to delcare an array of objects but I think you 
-    can see the main idea. The result would be an expandable array of Items as
-    needed.
-    
-    charHelmets[n] = helm[0] , helm[1] , + ... + helm[n]
-    
-    A boolean field added to items could show whether or not the item was equipped.
-    Only one item in each catagory would be able to be equipped at once but many 
-    more items could be carried while not being equipped.
-     
-    */
-    
     // inventory items - these Item classes could be more specific ie helemt weapon etc
-    public Item helm;
-    public Item upper;
-    public Item lower;
-    public Item weapon;
-    public Item potion;
-    public Item adventure;
-        
-public Character(String n, int h, int m, int a, int s, int c, int i, int l, 
+    public Armor helm;
+    public Armor upper;
+    public Armor lower;
+    public Weapon weapon;
+    public Potion potion;
+    public Adventure adventure;
+    public Inventory charInventory;
+
+
+public Character(int identifier, String n, int h, int m, int a, int s, int c, int i, int l, 
         Item he, Item up, Item lo, Item we, Item po, Item ad){
 
+    id = identifer;
     name = n;
     health = h;
     magic = m;
@@ -62,8 +49,16 @@ public Character(String n, int h, int m, int a, int s, int c, int i, int l,
     
 }
 
-// name setters and getters
+// id setter and getter
+public int getId(){
+    return id;
+}
 
+public void setId(){
+    id = identifier;
+}
+
+// name setters and getters
 public String getName(){
     return name;
 }
@@ -147,7 +142,7 @@ public Item getHelmet(){
     return helm;
 }
 
-public void setHelmet(Item newHelm){
+public void setHelmet(Armor newHelm){
     helm = newHelm;
 }
 
@@ -157,7 +152,7 @@ public Item getUpper(){
     return upper;
 }
 
-public void setUpper(Item newUpper){
+public void setUpper(Armor newUpper){
     upper = newUpper;
 }
 
@@ -167,7 +162,7 @@ public Item getLower(){
     return lower;
 }
 
-public void setLower(Item newLower){
+public void setLower(Armor newLower){
     lower = newLower;
 }
 
@@ -177,7 +172,7 @@ public Item getWeapon(){
     return weapon;
 }
 
-public void setWeapon(Item newWeapon){
+public void setWeapon(Weapon newWeapon){
     weapon = newWeapon;
 }
 
@@ -187,7 +182,7 @@ public Item getPotion(){
     return potion;
 }
 
-public void setPotion(Item newPotion){
+public void setPotion(Potion newPotion){
     potion = newPotion;
 }
 
@@ -197,8 +192,16 @@ public Item getAdventure(){
     return adventure;
 }
 
-public void setAdventure(Item newAdventure){
+public void setAdventure(Adventure newAdventure){
     adventure = newAdventure;
 }
 
+}
+
+public Inventory getCharInventory() {
+    return charInventory;
+}
+
+public void setCharInventory(Inventory charInventory) {
+    this.charInventory = charInventory;
 }

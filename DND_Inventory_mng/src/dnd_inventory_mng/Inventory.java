@@ -21,7 +21,7 @@ import java.io.FileNotFoundException;
  * @author Matt
  */
 
-public class CSVHandling {
+public class Inventory {
    
     //Delimiters used in the CSV file
     private static final String COMMA_DELIMITER = ",";
@@ -35,7 +35,7 @@ public class CSVHandling {
     List<Potion> potionItemList = new ArrayList<Potion>();
     List<Adventure> adventureItemList = new ArrayList<Adventure>();
     
-    public void readFromCSV(){
+    public void buildInventoryList(){
         BufferedReader br = null;
         
         try
@@ -48,6 +48,8 @@ public class CSVHandling {
                 br = new BufferedReader(new FileReader(itemTypeFile));
 
                 //Create List for holding Item objects
+                
+
                 String line = "";
                 //Read to skip the header
                 br.readLine();
@@ -125,9 +127,6 @@ public class CSVHandling {
                                 +e.getCost()+"   "+e.getWeight()+"   "
                                 +e.getRange()+"   "+e.getStamina());
             }
-            
-            //Example of how to look up the name of an item.
-            System.out.println(meleeItemList.get(1).getName());
             
         }
         catch(Exception ee)

@@ -11,7 +11,7 @@ package dnd_inventory_mng;
  */
 public class Tester {
     public static void main(String[] args){
-        CSVHandling reader = new CSVHandling();
+        Inventory reader = new Inventory();
         reader.readFromCSV();
         
     
