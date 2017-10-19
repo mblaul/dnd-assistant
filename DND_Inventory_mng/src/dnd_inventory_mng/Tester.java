@@ -12,7 +12,7 @@ package dnd_inventory_mng;
 public class Tester {
     public static void main(String[] args){
         Inventory reader = new Inventory();
-        reader.readFromCSV();
+        reader.buildInventoryList();
         
     
     }
