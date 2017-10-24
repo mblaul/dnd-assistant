@@ -21,23 +21,20 @@ import java.io.FileNotFoundException;
  * @author Matt
  */
 
-public class Inventory {
+public class InventoryList {
    
     //Delimiters used in the CSV file
     private static final String COMMA_DELIMITER = ",";
     private static final String ITEM_FILE_DIR = System.getProperty("user.dir")+"/src/dnd_inventory_mng/files/";
     
     String[] itemType = {"Armor","Melee","Ranged","Potion","Adventure"};
-    List<Item> itemList = new ArrayList<Item>();
-    List<Armor> armorItemList = new ArrayList<Armor>();
-    List<Melee> meleeItemList = new ArrayList<Melee>();
-    List<Ranged> rangedItemList = new ArrayList<Ranged>();
-    List<Potion> potionItemList = new ArrayList<Potion>();
-    List<Adventure> adventureItemList = new ArrayList<Adventure>();
     
-    public void buildInventoryList(){
+    public void buildInventoryList(List<Armor> armorItemList,List<Melee> meleeItemList,
+                                   List<Ranged> rangedItemList,List<Potion> potionItemList,
+                                   List<Adventure> adventureItemList){
         BufferedReader br = null;
         
+       
         try
         {
             for(int i = 0; i+1 <= itemType.length; i++){
@@ -109,24 +106,24 @@ public class Inventory {
             }
 
             //Lets print the Item List
-            for(Armor e : armorItemList)
-            {
-                System.out.println(e.getItemID()+"   "+e.getName()+"   "
-                                +e.getCost()+"   "+e.getWeight()+"   "
-                                +e.getDefense());
-            }
-            for(Melee e : meleeItemList)
-            {
-                System.out.println(e.getItemID()+"   "+e.getName()+"   "
-                                +e.getCost()+"   "+e.getWeight()+"   "
-                                +e.getStrength()+"   "+e.getStamina());
-            }
-            for(Ranged e : rangedItemList)
-            {
-                System.out.println(e.getItemID()+"   "+e.getName()+"   "
-                                +e.getCost()+"   "+e.getWeight()+"   "
-                                +e.getRange()+"   "+e.getStamina());
-            }
+//            for(Armor e : armorItemList)
+//            {
+//                System.out.println(e.getItemID()+"   "+e.getName()+"   "
+//                                +e.getCost()+"   "+e.getWeight()+"   "
+//                                +e.getDefense());
+//            }
+//            for(Melee e : meleeItemList)
+//            {
+//                System.out.println(e.getItemID()+"   "+e.getName()+"   "
+//                                +e.getCost()+"   "+e.getWeight()+"   "
+//                                +e.getStrength()+"   "+e.getStamina());
+//            }
+//            for(Ranged e : rangedItemList)
+//            {
+//                System.out.println(e.getItemID()+"   "+e.getName()+"   "
+//                                +e.getCost()+"   "+e.getWeight()+"   "
+//                                +e.getRange()+"   "+e.getStamina());
+//            }
             
         }
         catch(Exception ee)

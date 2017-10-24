@@ -24,184 +24,169 @@ public class Character {
     public Weapon weapon;
     public Potion potion;
     public Adventure adventure;
-    public Inventory charInventory;
+    public InventoryList charInventory;
 
 
-public Character(int identifier, String n, int h, int m, int a, int s, int c, int i, int l, 
-        Item he, Item up, Item lo, Item we, Item po, Item ad){
+    public Character(int identifier, String n, int h, int m, int a, int s, int c, int i, int l, 
+            Armor he, Armor up, Armor lo, Weapon we, Potion po, Adventure ad){
 
-    id = identifer;
-    name = n;
-    health = h;
-    magic = m;
-    agility = a;
-    strength = s;
-    charisma = c;
-    intelligence = i;
-    luck = l;
+        id = identifier;
+        name = n;
+        health = h;
+        magic = m;
+        agility = a;
+        strength = s;
+        charisma = c;
+        intelligence = i;
+        luck = l;
+
+        helm = he;
+        upper = up;
+        lower = lo;
+        weapon = we;
+        potion = po;
+    }
+
+    // id setter and getter
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int identifier){
+        id = identifier;
+    }
+
+    // name setters and getters
+    public String getName(){
+        return name;
+    }
     
-    helm = he;
-    upper = up;
-    lower = lo;
-    weapon = we;
-    potion = po;
-    
-    
-}
+    public void setName(String newName){
+        name=newName;
+    }
 
-// id setter and getter
-public int getId(){
-    return id;
-}
+    // health setters and getters
+    public int getHealth(){
+        return health;
+    }
 
-public void setId(){
-    id = identifier;
-}
+    public void setHealth(int newHealth){
+        health = newHealth;
+    }
 
-// name setters and getters
-public String getName(){
-    return name;
-}
-public void setName(String newName){
-    name=newName;
-}
+    // magic setters and getters
+    public int getMagic(){
+        return magic;
+    }
 
-// health setters and getters
+    public void setMagic(int newMagic){
+        magic = newMagic;
+    }
 
-public int getHealth(){
-    return health;
-}
+    // agility setters and getters
+    public int getAgility(){
+        return agility;
+    }
 
-public void setHealth(int newHealth){
-    health = newHealth;
-}
+    public void setAgility(int newAgility){
+        agility = newAgility;
+    }
 
-// magic setters and getters
+    // strength setters and getters
+    public int getStrength(){
+        return strength;
+    }
 
-public int getMagic(){
-    return magic;
-}
+    public void setStregth(int newStrength){
+        strength = newStrength;
+    }
 
-public void setMagic(int newMagic){
-    magic = newMagic;
-}
+    // charisma setters and getters
+    public int getCharisma(){
+        return charisma;
+    }
 
-// agility setters and getters
+    public void setCharisma(int newCharisma){
+        charisma = newCharisma;
+    }
 
-public int getAgility(){
-    return agility;
-}
+    // intelligence setters and getters
+    public int getIntelligence(){
+        return intelligence;
+    }
 
-public void setAgility(int newAgility){
-    agility = newAgility;
-}
+    public void setIntelligence(int newIntelligence){
+        intelligence = newIntelligence;
+    }
 
-// strength setters and getters
+    // luck setters and getters
+    public int getLuck(){
+        return luck;
+    }
 
-public int getStrength(){
-    return strength;
-}
+    public void setLuck(int newLuck){
+        luck = newLuck;
+    }
 
-public void setStregth(int newStrength){
-    strength = newStrength;
-}
+    // helmet setter and getters
+    public Item getHelmet(){
+        return helm;
+    }
 
-// charisma setters and getters
+    public void setHelmet(Armor newHelm){
+        helm = newHelm;
+    }
 
-public int getCharisma(){
-    return charisma;
-}
+    // upper setters and getters
+    public Item getUpper(){
+        return upper;
+    }
 
-public void setCharisma(int newCharisma){
-    charisma = newCharisma;
-}
+    public void setUpper(Armor newUpper){
+        upper = newUpper;
+    }
 
-// intelligence setters and getters
+    // lower setters and getters
+    public Item getLower(){
+        return lower;
+    }
 
-public int getIntelligence(){
-    return intelligence;
-}
+    public void setLower(Armor newLower){
+        lower = newLower;
+    }
 
-public void setIntelligence(int newIntelligence){
-    intelligence = newIntelligence;
-}
+    // weapon setters and getters
+    public Item getWeapon(){
+        return weapon;
+    }
 
-// luck setters and getters
+    public void setWeapon(Weapon newWeapon){
+        weapon = newWeapon;
+    }
 
-public int getLuck(){
-    return luck;
-}
+    // potion setters and getters
+    public Item getPotion(){
+        return potion;
+    }
 
-public void setLuck(int newLuck){
-    luck = newLuck;
-}
+    public void setPotion(Potion newPotion){
+        potion = newPotion;
+    }
 
-// helmet setter and getters
+    // adventure setters and getters
+    public Item getAdventure(){
+        return adventure;
+    }
 
-public Item getHelmet(){
-    return helm;
-}
+    public void setAdventure(Adventure newAdventure){
+        adventure = newAdventure;
+    }
 
-public void setHelmet(Armor newHelm){
-    helm = newHelm;
-}
+    public InventoryList getCharInventory(){
+        return charInventory;
+    }
 
-// upper setters and getters
-
-public Item getUpper(){
-    return upper;
-}
-
-public void setUpper(Armor newUpper){
-    upper = newUpper;
-}
-
-// lower setters and getters
-
-public Item getLower(){
-    return lower;
-}
-
-public void setLower(Armor newLower){
-    lower = newLower;
-}
-
-// weapon setters and getters
-
-public Item getWeapon(){
-    return weapon;
-}
-
-public void setWeapon(Weapon newWeapon){
-    weapon = newWeapon;
-}
-
-// potion setters and getters
-
-public Item getPotion(){
-    return potion;
-}
-
-public void setPotion(Potion newPotion){
-    potion = newPotion;
-}
-
-// adventure setters and getters
-
-public Item getAdventure(){
-    return adventure;
-}
-
-public void setAdventure(Adventure newAdventure){
-    adventure = newAdventure;
-}
-
-}
-
-public Inventory getCharInventory() {
-    return charInventory;
-}
-
-public void setCharInventory(Inventory charInventory) {
-    this.charInventory = charInventory;
+    public void setCharInventory(InventoryList charInventory){
+        this.charInventory = charInventory;
+    }
 }
