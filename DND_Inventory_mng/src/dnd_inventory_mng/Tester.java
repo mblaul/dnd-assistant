@@ -5,15 +5,33 @@
  */
 package dnd_inventory_mng;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Matt
  */
 public class Tester {
     public static void main(String[] args){
+<<<<<<< HEAD
         Inventory reader = new Inventory();
         reader.buildInventoryList();
+=======
+    List<Item> itemList = new ArrayList<Item>();
+    List<Armor> armorItemList = new ArrayList<Armor>();
+    List<Melee> meleeItemList = new ArrayList<Melee>();
+    List<Ranged> rangedItemList = new ArrayList<Ranged>();
+    List<Potion> potionItemList = new ArrayList<Potion>();
+    List<Adventure> adventureItemList = new ArrayList<Adventure>();
         
+    //Build master inventory list using a method from the InventoryList class
+        InventoryList masterInventory = new InventoryList();
+        masterInventory.buildInventoryList(armorItemList,meleeItemList,rangedItemList,
+                                  potionItemList,adventureItemList);
+>>>>>>> 55badc8387b77d066906660d5a0de8ca601e056d
+        
+        System.out.println(rangedItemList.get(1).getAttack());
     
     }
     
