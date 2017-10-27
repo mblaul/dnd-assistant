@@ -1,5 +1,9 @@
 package dnd_inventory_mng;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Character {
     
     // defined during object creation
@@ -26,7 +30,7 @@ public class Character {
     public Adventure adventure;
     public InventoryList charInventory;
 
-
+    
     public Character(int identifier, String n, int h, int m, int a, int s, int c, int i, int l, 
             Armor he, Armor up, Armor lo, Weapon we, Potion po, Adventure ad){
 
@@ -46,6 +50,8 @@ public class Character {
         weapon = we;
         potion = po;
     }
+    
+    
 
     // id setter and getter
     public int getId(){
