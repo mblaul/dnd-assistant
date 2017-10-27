@@ -29,16 +29,17 @@ public class InventoryList {
     
     String[] itemType = {"Armor","Melee","Ranged","Potion","Adventure"};
     
-    public void buildInventoryList(List<Armor> armorItemList,List<Melee> meleeItemList,
+    public void buildItemInventoryList(List<Armor> armorItemList,List<Melee> meleeItemList,
                                    List<Ranged> rangedItemList,List<Potion> potionItemList,
                                    List<Adventure> adventureItemList){
         BufferedReader br = null;
         
-       
+       String itemInventoryDir = ITEM_FILE_DIR + "items/";
+        
         try
         {
             for(int i = 0; i+1 <= itemType.length; i++){
-                String itemTypeFile = ITEM_FILE_DIR + itemType[i] + ".csv";
+                String itemTypeFile = itemInventoryDir + itemType[i] + ".csv";
                 String itemCase = itemType[i];
                 
                 //Opening the individual csv files
@@ -126,6 +127,68 @@ public class InventoryList {
 //            }
             
         }
+        catch(Exception ee)
+        {
+            ee.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                br.close();
+            }
+            catch(IOException ie)
+            {
+                System.out.println("Error occured while closing the BufferedReader");
+                ie.printStackTrace();
+            }
+        }
+    }
+    
+    public void BuildCharacterInventories(){
+        BufferedReader br = null;
+        
+        String charInventoryDir = ITEM_FILE_DIR + "characterinventories/";
+        String[] charType = {"Matt","Garret","Jesse","Mary","Stefen"};
+
+        try
+        {
+            for(int i = 0; i+1 <= charType.length; i++){
+                String charTypeFile = charInventoryDir + charType[i] + ".csv";
+                String charCase = charType[i];
+                
+                //Opening the individual csv files
+                br = new BufferedReader(new FileReader(charTypeFile));
+
+                //Create List for holding Item objects
+                
+
+                String line = "";
+                //Read to skip the header
+                br.readLine();
+                //Reading from the second line
+                while ((line = br.readLine()) != null) 
+                {
+                    String[] itemDetails = line.split(COMMA_DELIMITER);
+
+                    if(itemDetails.length > 0 )
+                    {
+                        switch(charCase){
+                            
+                            case "Armor":
+                            //Add the item details in Armor object
+                            Armor itemTemp0 = new Armor(Integer.parseInt(itemDetails[0]),
+                                    itemDetails[1],Integer.parseInt(itemDetails[2]),
+                                    Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]));
+                            armorItemList.add(itemTemp0);
+                            break;
+                            
+                        }        
+                    }
+                }
+            }
+        }
+        
         catch(Exception ee)
         {
             ee.printStackTrace();

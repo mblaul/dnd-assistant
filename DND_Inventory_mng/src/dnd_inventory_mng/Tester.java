@@ -14,10 +14,9 @@ import java.util.List;
  */
 public class Tester {
     public static void main(String[] args){
-<<<<<<< HEAD
-        Inventory reader = new Inventory();
+        InventoryList reader = new InventoryList();
         reader.buildInventoryList();
-=======
+
     List<Item> itemList = new ArrayList<Item>();
     List<Armor> armorItemList = new ArrayList<Armor>();
     List<Melee> meleeItemList = new ArrayList<Melee>();
@@ -29,7 +28,6 @@ public class Tester {
         InventoryList masterInventory = new InventoryList();
         masterInventory.buildInventoryList(armorItemList,meleeItemList,rangedItemList,
                                   potionItemList,adventureItemList);
->>>>>>> 55badc8387b77d066906660d5a0de8ca601e056d
         
         System.out.println(rangedItemList.get(1).getAttack());
     
