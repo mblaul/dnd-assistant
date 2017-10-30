@@ -49,9 +49,6 @@ public class Add_item extends javax.swing.JFrame {
         jButton_continue = new javax.swing.JButton();
         jTextField_weight = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jButton_addName = new javax.swing.JButton();
-        jButton_addCost = new javax.swing.JButton();
-        jButton_addWeight = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,7 +60,7 @@ public class Add_item extends javax.swing.JFrame {
 
         jLabel4.setText("Weight");
 
-        jComboBox_itemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Melee", "Ranged" }));
+        jComboBox_itemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Melee", "Ranged", "Potion", "Adventure" }));
 
         jLabel5.setText("Gp");
 
@@ -83,27 +80,6 @@ public class Add_item extends javax.swing.JFrame {
 
         jLabel6.setText("lbs.");
 
-        jButton_addName.setText("set");
-        jButton_addName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_addNameActionPerformed(evt);
-            }
-        });
-
-        jButton_addCost.setText("set");
-        jButton_addCost.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_addCostActionPerformed(evt);
-            }
-        });
-
-        jButton_addWeight.setText("set");
-        jButton_addWeight.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_addWeightActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -112,7 +88,7 @@ public class Add_item extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 161, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton_continue)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton_quit, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -135,18 +111,10 @@ public class Add_item extends javax.swing.JFrame {
                                 .addComponent(jTextField_weight, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel6)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton_addWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton_addName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton_addCost, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52)))
-                .addContainerGap())
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_continue, jButton_quit});
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_addCost, jButton_addName, jButton_addWeight});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,21 +126,18 @@ public class Add_item extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField_itemname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_addName))
+                    .addComponent(jTextField_itemname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField_cost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jButton_addCost))
+                    .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField_weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jButton_addWeight))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_quit)
                     .addComponent(jButton_continue))
@@ -183,7 +148,9 @@ public class Add_item extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,18 +168,6 @@ public class Add_item extends javax.swing.JFrame {
        g.setVisible(false);
     }//GEN-LAST:event_jButton_quitActionPerformed
 
-    private void jButton_addNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addNameActionPerformed
-        nameT = this.jTextField_itemname.getText();
-    }//GEN-LAST:event_jButton_addNameActionPerformed
-
-    private void jButton_addCostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addCostActionPerformed
-        costT = parseInt(this.jTextField_cost.getText());
-    }//GEN-LAST:event_jButton_addCostActionPerformed
-
-    private void jButton_addWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addWeightActionPerformed
-        weightT = parseInt(this.jTextField_weight.getText());
-    }//GEN-LAST:event_jButton_addWeightActionPerformed
-
     private void jButton_continueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_continueActionPerformed
         if(this.jComboBox_itemType.getSelectedItem()=="Melee"){
             Add_item p = new Add_item();
@@ -225,7 +180,19 @@ public class Add_item extends javax.swing.JFrame {
             super.dispose();
             p.setVisible(false);
             Add_ranged r = new Add_ranged();
-            r.setVisible(true);   
+            r.setVisible(true);
+        }else if(this.jComboBox_itemType.getSelectedItem()=="Potion"){
+            Add_item p = new Add_item();
+            super.dispose();
+            p.setVisible(false);
+            Add_potion r = new Add_potion();
+            r.setVisible(true);
+        }else if(this.jComboBox_itemType.getSelectedItem()=="Adventure"){
+            Add_item p = new Add_item();
+            super.dispose();
+            p.setVisible(false);
+            Add_adventure r = new Add_adventure();
+            r.setVisible(true);    
     }
     }//GEN-LAST:event_jButton_continueActionPerformed
 
@@ -268,9 +235,6 @@ public class Add_item extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_addCost;
-    private javax.swing.JButton jButton_addName;
-    private javax.swing.JButton jButton_addWeight;
     private javax.swing.JButton jButton_continue;
     private javax.swing.JButton jButton_quit;
     private javax.swing.JComboBox<String> jComboBox_itemType;
