@@ -47,6 +47,11 @@ public class Add_adventure extends javax.swing.JFrame {
         jLabel3.setText("Modifier:");
 
         jButton_save.setText("Save Item");
+        jButton_save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_saveActionPerformed(evt);
+            }
+        });
 
         jButton_exit.setText("Close");
         jButton_exit.addActionListener(new java.awt.event.ActionListener() {
@@ -113,11 +118,17 @@ public class Add_adventure extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    int mod;
+    String attr;
     private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed
 
         super.dispose();
     }//GEN-LAST:event_jButton_exitActionPerformed
+
+    private void jButton_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_saveActionPerformed
+       mod = Integer.parseInt(this.jTextField_modifier.getText());
+       attr = this.jComboBox_attribute.getSelectedItem().toString();
+    }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**
      * @param args the command line arguments

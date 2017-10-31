@@ -60,7 +60,7 @@ public class Add_item extends javax.swing.JFrame {
 
         jLabel4.setText("Weight");
 
-        jComboBox_itemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Melee", "Ranged", "Potion", "Adventure" }));
+        jComboBox_itemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Melee", "Ranged", "Armor", "Potion", "Adventure" }));
 
         jLabel5.setText("Gp");
 
@@ -169,6 +169,12 @@ public class Add_item extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_quitActionPerformed
 
     private void jButton_continueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_continueActionPerformed
+        nameT=jTextField_itemname.getText();
+        costT=Integer.parseInt(this.jTextField_cost.getText());
+        weightT=Integer.parseInt(this.jTextField_weight.getText());
+        System.out.println(nameT);
+        System.out.println(costT);
+        System.out.println(weightT);
         if(this.jComboBox_itemType.getSelectedItem()=="Melee"){
             Add_item p = new Add_item();
             super.dispose();
@@ -192,6 +198,12 @@ public class Add_item extends javax.swing.JFrame {
             super.dispose();
             p.setVisible(false);
             Add_adventure r = new Add_adventure();
+            r.setVisible(true);
+        }else if(this.jComboBox_itemType.getSelectedItem()=="Armor"){
+            Add_item p = new Add_item();
+            super.dispose();
+            p.setVisible(false);
+            Add_armor r = new Add_armor();
             r.setVisible(true);    
     }
     }//GEN-LAST:event_jButton_continueActionPerformed
