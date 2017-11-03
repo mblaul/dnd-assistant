@@ -14,8 +14,7 @@ import java.util.List;
  */
 public class Tester {
     public static void main(String[] args){
-        InventoryList reader = new InventoryList();
-        reader.buildInventoryList();
+
 
     List<Item> itemList = new ArrayList<Item>();
     List<Armor> armorItemList = new ArrayList<Armor>();

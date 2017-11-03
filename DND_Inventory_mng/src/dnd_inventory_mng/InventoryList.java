@@ -145,8 +145,8 @@ public class InventoryList {
             }
         }
     }
-    
-    public void BuildCharacterInventories(){
+   
+/*    public void BuildCharacterInventories(){
         BufferedReader br = null;
         
         String charInventoryDir = ITEM_FILE_DIR + "characterinventories/";
@@ -227,5 +227,6 @@ public class InventoryList {
         pw.write(sb.toString());
         pw.close();
         System.out.println("done!");    
-    }
+   }
+*/
 }    
