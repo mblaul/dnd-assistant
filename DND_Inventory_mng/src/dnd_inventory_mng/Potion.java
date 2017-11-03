@@ -10,26 +10,28 @@ package dnd_inventory_mng;
  * @author duroj
  */
 public class Potion extends Item {
-    private boolean mod;
+  
+    private int mod;
     private String attr;
 
     public Potion(){
         super();
     }
 
-    public Potion(int id,String name,int cost,double weight,boolean modifier){
+    public Potion(int id,String name,int cost,double weight,int modifier, String attribute){
         super(id,name,cost,weight);
         mod = modifier;
+        attr = attribute;
     }
 
-    public boolean isModifier() {
+    public int getModifier() {
         return mod;
     }
 
-    public void setModifier(boolean mod) {
+    public void setModifier(int mod) {
         this.mod = mod;
     }
-    
+
     public String getAttribute() {
         return attr;
     }
