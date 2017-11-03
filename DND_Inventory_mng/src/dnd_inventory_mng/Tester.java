@@ -26,7 +26,7 @@ public class Tester {
         
     //Build master inventory list using a method from the InventoryList class
         InventoryList masterInventory = new InventoryList();
-        masterInventory.buildInventoryList(armorItemList,meleeItemList,rangedItemList,
+        masterInventory.buildItemInventoryList(armorItemList,meleeItemList,rangedItemList,
                                   potionItemList,adventureItemList);
         
         System.out.println(rangedItemList.get(1).getAttack());
