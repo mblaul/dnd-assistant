@@ -90,7 +90,8 @@ public class InventoryList {
                             //Add the item details in Potion object
                             Potion itemTemp3 = new Potion(Integer.parseInt(itemDetails[0]),
                                     itemDetails[1],Integer.parseInt(itemDetails[2]),
-                                    Double.parseDouble(itemDetails[3]),Boolean.parseBoolean(itemDetails[4]));
+                                    Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),
+                                    itemDetails[5]);
                             potionItemList.add(itemTemp3);
                             break;
                             
