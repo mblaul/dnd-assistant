@@ -29,6 +29,8 @@ public class Tester {
         masterInventory.buildItemInventoryList(armorItemList,meleeItemList,rangedItemList,
                                   potionItemList,adventureItemList);
         
+        
+        
         System.out.println(rangedItemList.get(1).getAttack());
     
     }
