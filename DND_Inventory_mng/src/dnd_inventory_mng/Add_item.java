@@ -36,6 +36,7 @@ public class Add_item extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -49,6 +50,17 @@ public class Add_item extends javax.swing.JFrame {
         jButton_continue = new javax.swing.JButton();
         jTextField_weight = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
+        jLayeredPane1.setLayout(jLayeredPane1Layout);
+        jLayeredPane1Layout.setHorizontalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jLayeredPane1Layout.setVerticalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -159,9 +171,8 @@ public class Add_item extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-        String nameT;
-        int costT;
-        int weightT;
+
+    
     private void jButton_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitActionPerformed
        Add_item g = new Add_item();
        super.dispose();
@@ -169,12 +180,13 @@ public class Add_item extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_quitActionPerformed
 
     private void jButton_continueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_continueActionPerformed
-        nameT=jTextField_itemname.getText();
-        costT=Integer.parseInt(this.jTextField_cost.getText());
-        weightT=Integer.parseInt(this.jTextField_weight.getText());
-        System.out.println(nameT);
-        System.out.println(costT);
-        System.out.println(weightT);
+        Add_item additem = new Add_item();
+        String n;
+        int c,we;
+        n=(jTextField_itemname.getText());
+        c =Integer.parseInt(this.jTextField_cost.getText());
+        we =Integer.parseInt(this.jTextField_weight.getText());
+
         if(this.jComboBox_itemType.getSelectedItem()=="Melee"){
             Add_item p = new Add_item();
             super.dispose();
@@ -200,10 +212,12 @@ public class Add_item extends javax.swing.JFrame {
             Add_adventure r = new Add_adventure();
             r.setVisible(true);
         }else if(this.jComboBox_itemType.getSelectedItem()=="Armor"){
-            Add_item p = new Add_item();
+           Add_armor r = new Add_armor();
+           r.setName(n);
+           r.setCost(c);
+           r.setWeight(we);
             super.dispose();
-            p.setVisible(false);
-            Add_armor r = new Add_armor();
+            
             r.setVisible(true);    
     }
     }//GEN-LAST:event_jButton_continueActionPerformed
@@ -256,6 +270,7 @@ public class Add_item extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField_cost;
     private javax.swing.JTextField jTextField_itemname;
