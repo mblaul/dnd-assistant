@@ -10,6 +10,7 @@ package dnd_inventory_mng;
  * @author duroj
  */
 public class Potion extends Item {
+  
     private int mod;
     private String attr;
 
@@ -30,18 +31,14 @@ public class Potion extends Item {
     public void setModifier(int mod) {
         this.mod = mod;
     }
-    
+
     public String getAttribute() {
         return attr;
     }
 
-    public void setAttribute(String attr) {
-        this.attr = attr;
+    public void setAttribute(String attribute) {
+        this.attr = attribute;
     }
-
-
-
-    
 
 
     @Override
