@@ -11,6 +11,7 @@ package dnd_inventory_mng;
  */
 public class Potion extends Item {
     private boolean mod;
+    private String attr;
 
     public Potion(){
         super();
@@ -28,10 +29,14 @@ public class Potion extends Item {
     public void setModifier(boolean mod) {
         this.mod = mod;
     }
-
-
-
     
+    public String getAttribute() {
+        return attr;
+    }
+
+    public void setAttribute(String attribute) {
+        this.attr = attribute;
+    }
 
 
     @Override
