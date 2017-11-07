@@ -16,6 +16,7 @@ public class Start_screen extends javax.swing.JFrame {
      */
     public Start_screen() {
         initComponents();
+        ArrayList_Generator gen = new ArrayList_Generator();
     }
 
     /**
@@ -140,6 +141,7 @@ public class Start_screen extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Start_screen().setVisible(true);

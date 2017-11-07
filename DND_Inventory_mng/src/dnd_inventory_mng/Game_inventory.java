@@ -29,14 +29,9 @@ public class Game_inventory extends javax.swing.JFrame {
 
         jButton_close = new javax.swing.JButton();
         jButton_add_item = new javax.swing.JButton();
-        jTabbedPane_inventory = new javax.swing.JTabbedPane();
-        jPanel_weapons = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList_weapons = new javax.swing.JList<>();
-        jPanel_armor = new javax.swing.JPanel();
-        jPanel_potions = new javax.swing.JPanel();
-        jPanel_adgear = new javax.swing.JPanel();
-        jPanel_spells = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jComboBox_itemtype = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,83 +49,14 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
-        jList_weapons.setModel(new javax.swing.AbstractListModel<String>() {
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList_weapons);
+        jScrollPane2.setViewportView(jList1);
 
-        javax.swing.GroupLayout jPanel_weaponsLayout = new javax.swing.GroupLayout(jPanel_weapons);
-        jPanel_weapons.setLayout(jPanel_weaponsLayout);
-        jPanel_weaponsLayout.setHorizontalGroup(
-            jPanel_weaponsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_weaponsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
-        );
-        jPanel_weaponsLayout.setVerticalGroup(
-            jPanel_weaponsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_weaponsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-
-        jTabbedPane_inventory.addTab("Weapons", jPanel_weapons);
-
-        javax.swing.GroupLayout jPanel_armorLayout = new javax.swing.GroupLayout(jPanel_armor);
-        jPanel_armor.setLayout(jPanel_armorLayout);
-        jPanel_armorLayout.setHorizontalGroup(
-            jPanel_armorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel_armorLayout.setVerticalGroup(
-            jPanel_armorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-        );
-
-        jTabbedPane_inventory.addTab("Armor", jPanel_armor);
-
-        javax.swing.GroupLayout jPanel_potionsLayout = new javax.swing.GroupLayout(jPanel_potions);
-        jPanel_potions.setLayout(jPanel_potionsLayout);
-        jPanel_potionsLayout.setHorizontalGroup(
-            jPanel_potionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel_potionsLayout.setVerticalGroup(
-            jPanel_potionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-        );
-
-        jTabbedPane_inventory.addTab("Potions", jPanel_potions);
-
-        javax.swing.GroupLayout jPanel_adgearLayout = new javax.swing.GroupLayout(jPanel_adgear);
-        jPanel_adgear.setLayout(jPanel_adgearLayout);
-        jPanel_adgearLayout.setHorizontalGroup(
-            jPanel_adgearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel_adgearLayout.setVerticalGroup(
-            jPanel_adgearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-        );
-
-        jTabbedPane_inventory.addTab("Adventuring", jPanel_adgear);
-
-        javax.swing.GroupLayout jPanel_spellsLayout = new javax.swing.GroupLayout(jPanel_spells);
-        jPanel_spells.setLayout(jPanel_spellsLayout);
-        jPanel_spellsLayout.setHorizontalGroup(
-            jPanel_spellsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        jPanel_spellsLayout.setVerticalGroup(
-            jPanel_spellsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-        );
-
-        jTabbedPane_inventory.addTab("Spells", jPanel_spells);
+        jComboBox_itemtype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Armor", "Melee", "Ranged", "Potion", "Adventure" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -138,7 +64,9 @@ public class Game_inventory extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane_inventory, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jComboBox_itemtype, 0, 145, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton_close, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -149,12 +77,16 @@ public class Game_inventory extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_add_item)
+                    .addComponent(jComboBox_itemtype, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane_inventory, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton_add_item)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
-                        .addComponent(jButton_close)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton_close))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -208,13 +140,8 @@ public class Game_inventory extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_add_item;
     private javax.swing.JButton jButton_close;
-    private javax.swing.JList<String> jList_weapons;
-    private javax.swing.JPanel jPanel_adgear;
-    private javax.swing.JPanel jPanel_armor;
-    private javax.swing.JPanel jPanel_potions;
-    private javax.swing.JPanel jPanel_spells;
-    private javax.swing.JPanel jPanel_weapons;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane_inventory;
+    private javax.swing.JComboBox<String> jComboBox_itemtype;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

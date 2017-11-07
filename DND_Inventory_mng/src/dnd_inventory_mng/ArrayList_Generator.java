@@ -12,25 +12,26 @@ import java.util.List;
  *
  * @author Matt
  */
-public class Tester {
-    public static void main(String[] args){
-
-
+public class ArrayList_Generator {
     List<Item> itemList = new ArrayList<Item>();
     List<Armor> armorItemList = new ArrayList<Armor>();
     List<Melee> meleeItemList = new ArrayList<Melee>();
     List<Ranged> rangedItemList = new ArrayList<Ranged>();
     List<Potion> potionItemList = new ArrayList<Potion>();
     List<Adventure> adventureItemList = new ArrayList<Adventure>();
+    public static void main(String[] args){
+
+
+
         
     //Build master inventory list using a method from the InventoryList class
-        InventoryList masterInventory = new InventoryList();
-        masterInventory.buildItemInventoryList(armorItemList,meleeItemList,rangedItemList,
-                                  potionItemList,adventureItemList);
+        //InventoryList masterInventory = new InventoryList();
+        //masterInventory.buildItemInventoryList(armorItemList,meleeItemList,rangedItemList,
+        //                          potionItemList,adventureItemList);
         
         
         
-        System.out.println(rangedItemList.get(1).getAttack());
+        //System.out.println(rangedItemList.get(1).getAttack());
     
     }
     
