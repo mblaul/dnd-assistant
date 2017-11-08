@@ -131,7 +131,30 @@ public class Add_melee extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    int atk,str,stm;
+    int cost,weight,atk,str,stm;
+    String name;
+    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+     public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+     public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
     private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed
         
         super.dispose();
@@ -142,10 +165,9 @@ public class Add_melee extends javax.swing.JFrame {
         atk=Integer.parseInt(this.jTextField_attack.getText());
         str=Integer.parseInt(this.jTextField_strength.getText());
         stm=Integer.parseInt(this.jTextField_stamina.getText());
-        Melee melee1 = new Melee(id,name,cost,weight,def);
-        System.out.println("id = "+ armor1.getItemID()+ armor1.toString()+ " def = "+ armor1.getDefense());
-        ArrayList_Generator gen = new ArrayList_Generator();
-        gen.armorItemList.add(armor1);
+        Melee melee1 = new Melee(0,name,cost,weight,atk,str,stm);
+        ArrayList_Generator.meleeItemList.add(melee1);
+        super.dispose();
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**

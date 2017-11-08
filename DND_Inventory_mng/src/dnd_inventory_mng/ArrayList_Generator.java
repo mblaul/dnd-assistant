@@ -13,14 +13,13 @@ import java.util.List;
  * @author Matt
  */
 public class ArrayList_Generator {
-    List<Item> itemList = new ArrayList<Item>();
-    List<Armor> armorItemList = new ArrayList<Armor>();
-    List<Melee> meleeItemList = new ArrayList<Melee>();
-    List<Ranged> rangedItemList = new ArrayList<Ranged>();
-    List<Potion> potionItemList = new ArrayList<Potion>();
-    List<Adventure> adventureItemList = new ArrayList<Adventure>();
-    public static void main(String[] args){
-
+    public static List<Item> itemList = new ArrayList<Item>();
+    public static List<Armor> armorItemList = new ArrayList<Armor>();
+    public static List<Melee> meleeItemList = new ArrayList<Melee>();
+    public static List<Ranged> rangedItemList = new ArrayList<Ranged>();
+    public static List<Potion> potionItemList = new ArrayList<Potion>();
+    public static List<Adventure> adventureItemList = new ArrayList<Adventure>();
+    
 
 
         
@@ -34,5 +33,3 @@ public class ArrayList_Generator {
         //System.out.println(rangedItemList.get(1).getAttack());
     
     }
-    
-}

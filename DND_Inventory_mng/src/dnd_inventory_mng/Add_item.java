@@ -188,17 +188,19 @@ public class Add_item extends javax.swing.JFrame {
         we =Integer.parseInt(this.jTextField_weight.getText());
 
         if(this.jComboBox_itemType.getSelectedItem()=="Melee"){
-            Add_item p = new Add_item();
-            super.dispose();
-            p.setVisible(false);
-            Add_melee w = new Add_melee();
-            w.setVisible(true);   
-        } else if(this.jComboBox_itemType.getSelectedItem()=="Ranged"){
-            Add_item p = new Add_item();
-            super.dispose();
-            p.setVisible(false);
-            Add_ranged r = new Add_ranged();
+            Add_melee r = new Add_melee();
+            r.setName(n);
+            r.setCost(c);
+            r.setWeight(we);
             r.setVisible(true);
+            super.dispose();
+        } else if(this.jComboBox_itemType.getSelectedItem()=="Ranged"){
+            Add_ranged r = new Add_ranged();
+            r.setName(n);
+            r.setCost(c);
+            r.setWeight(we);
+            r.setVisible(true);
+            super.dispose();
         }else if(this.jComboBox_itemType.getSelectedItem()=="Potion"){
             Add_item p = new Add_item();
             super.dispose();

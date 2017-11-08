@@ -118,8 +118,8 @@ public class Add_adventure extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    int mod;
-    String attr;
+    int mod,cost,weight;
+    String attr,name;
     private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed
 
         super.dispose();
@@ -128,6 +128,9 @@ public class Add_adventure extends javax.swing.JFrame {
     private void jButton_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_saveActionPerformed
        mod = Integer.parseInt(this.jTextField_modifier.getText());
        attr = this.jComboBox_attribute.getSelectedItem().toString();
+       Adventure adventure1 = new Adventure(0,name,cost,weight,mod,attr);
+       ArrayList_Generator.adventureItemList.add(adventure1);
+       super.dispose();
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**

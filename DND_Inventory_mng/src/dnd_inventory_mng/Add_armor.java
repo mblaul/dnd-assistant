@@ -149,7 +149,7 @@ public class Add_armor extends javax.swing.JFrame {
         Armor armor1 = new Armor(id,name,cost,weight,def);
         System.out.println("id = "+ armor1.getItemID()+ armor1.toString()+ " def = "+ armor1.getDefense());
         //ArrayList_Generator gen = new ArrayList_Generator();
-        gen.armorItemList.add(armor1);
+        ArrayList_Generator.armorItemList.add(armor1);
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed

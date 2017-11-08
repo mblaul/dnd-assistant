@@ -5,6 +5,9 @@
  */
 package dnd_inventory_mng;
 
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+
 /**
  *
  * @author duroj
@@ -14,6 +17,9 @@ public class Game_inventory extends javax.swing.JFrame {
     /**
      * Creates new form Game_inventory
      */
+    JList itemlist = new JList(ArrayList_Generator.itemList.toArray());
+    itemlist.setCellRenderer(new ItemListRenderer());
+    JScrollPane scr = new JScrollPane(itemlist);
     public Game_inventory() {
         initComponents();
     }
@@ -30,7 +36,7 @@ public class Game_inventory extends javax.swing.JFrame {
         jButton_close = new javax.swing.JButton();
         jButton_add_item = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jList_itemlist = new javax.swing.JList<>();
         jComboBox_itemtype = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,12 +55,12 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jList_itemlist.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList1);
+        jScrollPane2.setViewportView(jList_itemlist);
 
         jComboBox_itemtype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Armor", "Melee", "Ranged", "Potion", "Adventure" }));
 
@@ -133,6 +139,7 @@ public class Game_inventory extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Game_inventory().setVisible(true);
+                
             }
         });
     }
@@ -141,7 +148,7 @@ public class Game_inventory extends javax.swing.JFrame {
     private javax.swing.JButton jButton_add_item;
     private javax.swing.JButton jButton_close;
     private javax.swing.JComboBox<String> jComboBox_itemtype;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList_itemlist;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

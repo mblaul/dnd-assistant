@@ -120,8 +120,29 @@ public class Add_potion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    int mod;
-    String attr;
+    int cost,weight,mod;
+    String attr,name;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+     public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+     public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
     private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed
 
         super.dispose();
@@ -131,7 +152,9 @@ public class Add_potion extends javax.swing.JFrame {
     private void jButton_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_saveActionPerformed
         mod = Integer.parseInt(this.jTextField_modifier.getText());
         attr = this.jComboBox_attribute.getSelectedItem().toString();
-        
+        Potion potion1 = new Potion(0,name,cost,weight,mod,attr);
+        ArrayList_Generator.potionItemList.add(potion1);
+        super.dispose();
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**
