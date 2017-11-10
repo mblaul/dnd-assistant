@@ -150,6 +150,7 @@ public class Add_armor extends javax.swing.JFrame {
         System.out.println("id = "+ armor1.getItemID()+ armor1.toString()+ " def = "+ armor1.getDefense());
         //ArrayList_Generator gen = new ArrayList_Generator();
         ArrayList_Generator.armorItemList.add(armor1);
+        super.dispose();
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed

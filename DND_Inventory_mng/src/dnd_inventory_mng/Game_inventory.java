@@ -17,9 +17,8 @@ public class Game_inventory extends javax.swing.JFrame {
     /**
      * Creates new form Game_inventory
      */
-    JList itemlist = new JList(ArrayList_Generator.itemList.toArray());
-    itemlist.setCellRenderer(new ItemListRenderer());
-    JScrollPane scr = new JScrollPane(itemlist);
+    JList itemlist = new JList(ArrayList_Generator.armorItemList.toArray());
+
     public Game_inventory() {
         initComponents();
     }
@@ -32,6 +31,7 @@ public class Game_inventory extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         jButton_close = new javax.swing.JButton();
         jButton_add_item = new javax.swing.JButton();
@@ -55,11 +55,9 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
-        jList_itemlist.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, jList_itemlist, org.jdesktop.beansbinding.ObjectProperty.create(), jList_itemlist, org.jdesktop.beansbinding.BeanProperty.create("elements"));
+        bindingGroup.addBinding(binding);
+
         jScrollPane2.setViewportView(jList_itemlist);
 
         jComboBox_itemtype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Armor", "Melee", "Ranged", "Potion", "Adventure" }));
@@ -72,7 +70,7 @@ public class Game_inventory extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane2)
-                    .addComponent(jComboBox_itemtype, 0, 145, Short.MAX_VALUE))
+                    .addComponent(jComboBox_itemtype, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton_close, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -95,6 +93,8 @@ public class Game_inventory extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)))
                 .addContainerGap())
         );
+
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -150,5 +150,6 @@ public class Game_inventory extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox_itemtype;
     private javax.swing.JList<String> jList_itemlist;
     private javax.swing.JScrollPane jScrollPane2;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
