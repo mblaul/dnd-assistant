@@ -90,6 +90,8 @@
             <BindingProperty name="elements" source="jList_itemlist" target="jList_itemlist" targetPath="elements" updateStrategy="1" immediately="false"/>
           </BindingProperties>
           <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList&lt;&gt;(demoList)"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="DefaultListModel demoList = new DefaultListModel();&#xa;demoList.addElement(&quot;poop&quot;);"/>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
