@@ -64,18 +64,28 @@ public class Add_item extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 51));
+
+        jLabel1.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel1.setText("Item Name");
 
+        jLabel2.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel2.setText("Item Type");
 
+        jLabel3.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel3.setText("Cost");
 
+        jLabel4.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel4.setText("Weight");
 
+        jComboBox_itemType.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jComboBox_itemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Melee", "Ranged", "Armor", "Potion", "Adventure" }));
 
+        jLabel5.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel5.setText("Gp");
 
+        jButton_quit.setBackground(new java.awt.Color(204, 51, 0));
+        jButton_quit.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_quit.setText("Close");
         jButton_quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +93,8 @@ public class Add_item extends javax.swing.JFrame {
             }
         });
 
+        jButton_continue.setBackground(new java.awt.Color(0, 204, 51));
+        jButton_continue.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_continue.setText("Continue");
         jButton_continue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +102,7 @@ public class Add_item extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel6.setText("lbs.");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -149,7 +162,7 @@ public class Add_item extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(jTextField_weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_quit)
                     .addComponent(jButton_continue))
