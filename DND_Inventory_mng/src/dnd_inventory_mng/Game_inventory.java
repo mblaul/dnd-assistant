@@ -5,22 +5,31 @@
  */
 package dnd_inventory_mng;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
 
-/**
- *
- * @author duroj
- */
 public class Game_inventory extends javax.swing.JFrame {
 
     /**
      * Creates new form Game_inventory
      */
+<<<<<<< HEAD
     
+=======
+    private JList<String> itemJList;
+   
+>>>>>>> 6a71f19027d82264f18363986583ffda8d4c2a98
     
     public Game_inventory() {
+       
+        
+        
+        String items[] = {"A","B","C"};
+        DefaultListModel demoList = new DefaultListModel();
+        demoList.addElement("poop");
+        
         initComponents();
     }
 
@@ -37,7 +46,9 @@ public class Game_inventory extends javax.swing.JFrame {
         jButton_close = new javax.swing.JButton();
         jButton_add_item = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList_itemlist = new javax.swing.JList<>();
+        DefaultListModel demoList = new DefaultListModel();
+        demoList.addElement("poop");
+        jList_itemlist = new javax.swing.JList<>(demoList);
         jComboBox_itemtype = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -158,8 +169,7 @@ public class Game_inventory extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Game_inventory().setVisible(true);
-                
+                new Game_inventory().setVisible(true);  
             }
         });
     }
