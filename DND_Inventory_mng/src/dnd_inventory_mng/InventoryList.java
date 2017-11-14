@@ -103,7 +103,7 @@ public class InventoryList {
                             //Add the item details in Adventure object
                             Adventure itemTemp4 = new Adventure(Integer.parseInt(itemDetails[0]),
                                     itemDetails[1],Integer.parseInt(itemDetails[2]),
-                                    Double.parseDouble(itemDetails[3]),Boolean.parseBoolean(itemDetails[4]));
+                                    Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]),itemDetails[5]);
                             adventureItemList.add(itemTemp4);
                             break;
                         }        

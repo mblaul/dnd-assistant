@@ -10,22 +10,31 @@ package dnd_inventory_mng;
  * @author duroj
  */
 public class Adventure extends Item {
-    private boolean mod;
-
+    private int mod;
+    private String attr;
     public Adventure(){
         super();
     }
 
-    public Adventure(int id,String name,int cost,double weight,boolean modifier){
+    public Adventure(int id,String name,int cost,double weight,int modifier,String attribute){
         super(id,name,cost,weight);
         mod = modifier;
+        this.attr=attribute;
     }
 
-    public boolean isModifier() {
+    public int isModifier() {
         return mod;
     }
+    
+    public String getAttribute() {
+        return attr;
+    }
 
-    public void setModifier(boolean mod) {
+    public void setAttribute(String attribute) {
+        this.attr = attribute;
+    }
+
+    public void setModifier(int mod) {
         this.mod = mod;
     }
 

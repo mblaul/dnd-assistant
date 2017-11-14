@@ -143,7 +143,30 @@ public class Add_ranged extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    int atk,rng,stm;
+    int cost,weight,atk,rng,stm;
+    String name;
+   
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+     public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+     public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
     private void jButton_closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_closeActionPerformed
 
         super.dispose();
@@ -153,6 +176,9 @@ public class Add_ranged extends javax.swing.JFrame {
         atk=Integer.parseInt(this.jTextField_attack.getText());
         rng=Integer.parseInt(this.jTextField_range.getText());
         stm=Integer.parseInt(this.jTextField_stamina.getText());
+        Ranged ranged1 = new Ranged(0,name,cost,weight,atk,rng,stm);
+        ArrayList_Generator.rangedItemList.add(ranged1);
+        super.dispose();
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**

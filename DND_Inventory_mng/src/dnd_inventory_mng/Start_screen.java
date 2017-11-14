@@ -16,6 +16,7 @@ public class Start_screen extends javax.swing.JFrame {
      */
     public Start_screen() {
         initComponents();
+        
     }
 
     /**
@@ -147,6 +148,17 @@ public class Start_screen extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
+        ArrayList_Generator gen = new ArrayList_Generator();
+        //Build master inventory list using a method from the InventoryList class
+        InventoryList masterInventory = new InventoryList();
+        masterInventory.buildItemInventoryList(ArrayList_Generator.armorItemList,ArrayList_Generator.meleeItemList,ArrayList_Generator.rangedItemList,
+                                  ArrayList_Generator.potionItemList,ArrayList_Generator.adventureItemList);
+                                    
+        System.out.println(ArrayList_Generator.armorItemList.get(1).toString());
+        
+        //System.out.println(rangedItemList.get(1).getAttack());
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Start_screen().setVisible(true);
