@@ -33,7 +33,10 @@ public class Start_screen extends javax.swing.JFrame {
         jButton_quit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 153, 0));
 
+        jButton_load.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_load.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_load.setText("Load Game");
         jButton_load.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,6 +44,8 @@ public class Start_screen extends javax.swing.JFrame {
             }
         });
 
+        jButton_new.setBackground(new java.awt.Color(0, 204, 51));
+        jButton_new.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_new.setText("Start New Game");
         jButton_new.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,9 +53,11 @@ public class Start_screen extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Serif", 2, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Copperplate Gothic Light", 2, 48)); // NOI18N
         jLabel1.setText("Table-Top Titan");
 
+        jButton_quit.setBackground(new java.awt.Color(204, 51, 0));
+        jButton_quit.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_quit.setText("Quit");
         jButton_quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,21 +75,21 @@ public class Start_screen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton_load, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(186, 186, 186)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton_quit)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(73, 73, 73)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_new, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_load, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))

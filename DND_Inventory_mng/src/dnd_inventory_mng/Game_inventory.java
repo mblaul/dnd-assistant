@@ -40,6 +40,8 @@ public class Game_inventory extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton_close.setBackground(new java.awt.Color(255, 51, 0));
+        jButton_close.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_close.setText("Close");
         jButton_close.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +49,8 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
+        jButton_add_item.setBackground(new java.awt.Color(0, 204, 51));
+        jButton_add_item.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_add_item.setText("Add Item");
         jButton_add_item.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +58,12 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
+        jTabbedPane_inventory.setBackground(new java.awt.Color(255, 153, 51));
+        jTabbedPane_inventory.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
+
+        jPanel_weapons.setBackground(new java.awt.Color(204, 153, 255));
+
+        jList_weapons.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jList_weapons.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -75,10 +85,12 @@ public class Game_inventory extends javax.swing.JFrame {
             .addGroup(jPanel_weaponsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane_inventory.addTab("Weapons", jPanel_weapons);
+
+        jPanel_armor.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout jPanel_armorLayout = new javax.swing.GroupLayout(jPanel_armor);
         jPanel_armor.setLayout(jPanel_armorLayout);
@@ -88,10 +100,12 @@ public class Game_inventory extends javax.swing.JFrame {
         );
         jPanel_armorLayout.setVerticalGroup(
             jPanel_armorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 226, Short.MAX_VALUE)
         );
 
         jTabbedPane_inventory.addTab("Armor", jPanel_armor);
+
+        jPanel_potions.setBackground(new java.awt.Color(153, 255, 153));
 
         javax.swing.GroupLayout jPanel_potionsLayout = new javax.swing.GroupLayout(jPanel_potions);
         jPanel_potions.setLayout(jPanel_potionsLayout);
@@ -101,10 +115,12 @@ public class Game_inventory extends javax.swing.JFrame {
         );
         jPanel_potionsLayout.setVerticalGroup(
             jPanel_potionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 226, Short.MAX_VALUE)
         );
 
         jTabbedPane_inventory.addTab("Potions", jPanel_potions);
+
+        jPanel_adgear.setBackground(new java.awt.Color(255, 102, 102));
 
         javax.swing.GroupLayout jPanel_adgearLayout = new javax.swing.GroupLayout(jPanel_adgear);
         jPanel_adgear.setLayout(jPanel_adgearLayout);
@@ -114,10 +130,12 @@ public class Game_inventory extends javax.swing.JFrame {
         );
         jPanel_adgearLayout.setVerticalGroup(
             jPanel_adgearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 226, Short.MAX_VALUE)
         );
 
         jTabbedPane_inventory.addTab("Adventuring", jPanel_adgear);
+
+        jPanel_spells.setBackground(new java.awt.Color(255, 153, 51));
 
         javax.swing.GroupLayout jPanel_spellsLayout = new javax.swing.GroupLayout(jPanel_spells);
         jPanel_spells.setLayout(jPanel_spellsLayout);
@@ -127,7 +145,7 @@ public class Game_inventory extends javax.swing.JFrame {
         );
         jPanel_spellsLayout.setVerticalGroup(
             jPanel_spellsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 226, Short.MAX_VALUE)
         );
 
         jTabbedPane_inventory.addTab("Spells", jPanel_spells);
@@ -153,7 +171,7 @@ public class Game_inventory extends javax.swing.JFrame {
                     .addComponent(jTabbedPane_inventory, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton_add_item)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
                         .addComponent(jButton_close)))
                 .addContainerGap())
         );

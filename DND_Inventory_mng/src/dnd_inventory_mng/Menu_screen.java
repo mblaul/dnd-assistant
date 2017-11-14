@@ -36,7 +36,10 @@ public class Menu_screen extends javax.swing.JFrame {
         jButton_save = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 51, 0));
 
+        jButton_quit.setBackground(new java.awt.Color(255, 51, 0));
+        jButton_quit.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_quit.setText("Quit");
         jButton_quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,6 +47,8 @@ public class Menu_screen extends javax.swing.JFrame {
             }
         });
 
+        jButton_inventory.setBackground(new java.awt.Color(102, 153, 255));
+        jButton_inventory.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_inventory.setText("Game Inventory");
         jButton_inventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,8 +56,12 @@ public class Menu_screen extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(255, 204, 51));
+        jButton4.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton4.setText("Combat Handler");
 
+        jButton_characters.setBackground(new java.awt.Color(255, 102, 51));
+        jButton_characters.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_characters.setText("Characters");
         jButton_characters.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +69,8 @@ public class Menu_screen extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setBackground(new java.awt.Color(153, 102, 255));
+        jButton6.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton6.setText("Skill Check");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,10 +78,12 @@ public class Menu_screen extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("FreeSerif", 3, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Copperplate Gothic Light", 3, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Menu");
 
+        jButton_save.setBackground(new java.awt.Color(0, 204, 51));
+        jButton_save.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_save.setText("Save");
         jButton_save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,20 +104,18 @@ public class Menu_screen extends javax.swing.JFrame {
                             .addComponent(jButton_characters, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(75, 75, 75))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(75, 75, 75))))
+                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(75, 75, 75))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton_save)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton_quit)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(280, 280, 280))))
+                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(222, 222, 222))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,7 +130,7 @@ public class Menu_screen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_characters, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_quit)
                     .addComponent(jButton_save))
