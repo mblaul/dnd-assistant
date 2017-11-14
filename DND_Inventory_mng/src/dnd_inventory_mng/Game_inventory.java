@@ -7,6 +7,7 @@ package dnd_inventory_mng;
 
 import javax.swing.JList;
 import javax.swing.JScrollPane;
+import javax.swing.ListSelectionModel;
 
 /**
  *
@@ -17,8 +18,8 @@ public class Game_inventory extends javax.swing.JFrame {
     /**
      * Creates new form Game_inventory
      */
-    JList itemlist = new JList(ArrayList_Generator.armorItemList.toArray());
-
+    
+    
     public Game_inventory() {
         initComponents();
     }
@@ -61,6 +62,11 @@ public class Game_inventory extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jList_itemlist);
 
         jComboBox_itemtype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Armor", "Melee", "Ranged", "Potion", "Adventure" }));
+        jComboBox_itemtype.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_itemtypeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,14 +105,28 @@ public class Game_inventory extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void jButton_add_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_add_itemActionPerformed
         Add_item p = new Add_item();
             p.setVisible(true);
+            
+            String[] thinglist = {"a","b","c"};
+            JList thingy =(JList) jScrollPane2.getViewport().getView();thingy.setListData(thinglist);
+            thingy.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+            JScrollPane jScrollPane2 = new JScrollPane(thingy);
+            
+           
     }//GEN-LAST:event_jButton_add_itemActionPerformed
 
     private void jButton_closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_closeActionPerformed
         super.dispose();
     }//GEN-LAST:event_jButton_closeActionPerformed
+
+    private void jComboBox_itemtypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_itemtypeActionPerformed
+        if (this.jComboBox_itemtype.getSelectedItem()=="Melee") {
+            
+        }
+    }//GEN-LAST:event_jComboBox_itemtypeActionPerformed
 
     /**
      * @param args the command line arguments
