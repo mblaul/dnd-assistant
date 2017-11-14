@@ -6,24 +6,17 @@
 package dnd_inventory_mng;
 
 import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
 
 /**
  *
  * @author duroj
  */
-public class Add_item extends javax.swing.JFrame {
+public class Game_weaponlist_modifier_pg1 extends javax.swing.JFrame {
 
     /**
      * Creates new form Game_weaponlist_modifier
      */
-    public Add_item() {
+    public Game_weaponlist_modifier_pg1() {
         initComponents();
     }
 
@@ -36,7 +29,6 @@ public class Add_item extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -50,21 +42,14 @@ public class Add_item extends javax.swing.JFrame {
         jButton_continue = new javax.swing.JButton();
         jTextField_weight = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jButton_addName = new javax.swing.JButton();
+        jButton_addCost = new javax.swing.JButton();
+        jButton_addWeight = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 51));
+        jPanel1.setBackground(new java.awt.Color(102, 153, 255));
+        jPanel1.setForeground(new java.awt.Color(0, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel1.setText("Item Name");
@@ -79,21 +64,21 @@ public class Add_item extends javax.swing.JFrame {
         jLabel4.setText("Weight");
 
         jComboBox_itemType.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
-        jComboBox_itemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Melee", "Ranged", "Armor", "Potion", "Adventure" }));
+        jComboBox_itemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Melee", "Ranged" }));
 
         jLabel5.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel5.setText("Gp");
 
-        jButton_quit.setBackground(new java.awt.Color(204, 51, 0));
+        jButton_quit.setBackground(new java.awt.Color(255, 51, 0));
         jButton_quit.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
-        jButton_quit.setText("Close");
+        jButton_quit.setText("Exit");
         jButton_quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_quitActionPerformed(evt);
             }
         });
 
-        jButton_continue.setBackground(new java.awt.Color(0, 204, 51));
+        jButton_continue.setBackground(new java.awt.Color(0, 255, 102));
         jButton_continue.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_continue.setText("Continue");
         jButton_continue.addActionListener(new java.awt.event.ActionListener() {
@@ -105,6 +90,33 @@ public class Add_item extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jLabel6.setText("lbs.");
 
+        jButton_addName.setBackground(new java.awt.Color(102, 204, 255));
+        jButton_addName.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
+        jButton_addName.setText("set");
+        jButton_addName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_addNameActionPerformed(evt);
+            }
+        });
+
+        jButton_addCost.setBackground(new java.awt.Color(102, 204, 255));
+        jButton_addCost.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
+        jButton_addCost.setText("set");
+        jButton_addCost.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_addCostActionPerformed(evt);
+            }
+        });
+
+        jButton_addWeight.setBackground(new java.awt.Color(102, 204, 255));
+        jButton_addWeight.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
+        jButton_addWeight.setText("set");
+        jButton_addWeight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_addWeightActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -113,7 +125,7 @@ public class Add_item extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 125, Short.MAX_VALUE)
                         .addComponent(jButton_continue)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton_quit, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -136,7 +148,13 @@ public class Add_item extends javax.swing.JFrame {
                                 .addComponent(jTextField_weight, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel6)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton_addName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton_addCost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton_addWeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(41, 41, 41)))
+                .addContainerGap())
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_continue, jButton_quit});
@@ -149,23 +167,34 @@ public class Add_item extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jComboBox_itemType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField_itemname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField_cost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField_weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_quit)
-                    .addComponent(jButton_continue))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jTextField_itemname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jTextField_cost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jTextField_weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jButton_addWeight))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButton_quit)
+                                    .addComponent(jButton_continue)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jButton_addCost, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jButton_addName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -173,9 +202,7 @@ public class Add_item extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,56 +211,38 @@ public class Add_item extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    
+        String nameT;
+        int costT;
+        int weightT;
     private void jButton_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitActionPerformed
-       Add_item g = new Add_item();
-       super.dispose();
-       g.setVisible(false);
+       System.exit(0);
     }//GEN-LAST:event_jButton_quitActionPerformed
 
-    private void jButton_continueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_continueActionPerformed
-        Add_item additem = new Add_item();
-        String n;
-        int c,we;
-        n=(jTextField_itemname.getText());
-        c =Integer.parseInt(this.jTextField_cost.getText());
-        we =Integer.parseInt(this.jTextField_weight.getText());
+    private void jButton_addNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addNameActionPerformed
+        nameT = this.jTextField_itemname.getText();
+    }//GEN-LAST:event_jButton_addNameActionPerformed
 
+    private void jButton_addCostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addCostActionPerformed
+        costT = parseInt(this.jTextField_cost.getText());
+    }//GEN-LAST:event_jButton_addCostActionPerformed
+
+    private void jButton_addWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addWeightActionPerformed
+        weightT = parseInt(this.jTextField_weight.getText());
+    }//GEN-LAST:event_jButton_addWeightActionPerformed
+
+    private void jButton_continueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_continueActionPerformed
         if(this.jComboBox_itemType.getSelectedItem()=="Melee"){
-            Add_melee r = new Add_melee();
-            r.setName(n);
-            r.setCost(c);
-            r.setWeight(we);
-            r.setVisible(true);
+            Game_weaponlist_modifier_pg1 p = new Game_weaponlist_modifier_pg1();
             super.dispose();
+            p.setVisible(false);
+            weaponlist_modifier_melee w = new weaponlist_modifier_melee();
+            w.setVisible(true);   
         } else if(this.jComboBox_itemType.getSelectedItem()=="Ranged"){
-            Add_ranged r = new Add_ranged();
-            r.setName(n);
-            r.setCost(c);
-            r.setWeight(we);
-            r.setVisible(true);
-            super.dispose();
-        }else if(this.jComboBox_itemType.getSelectedItem()=="Potion"){
-            Add_item p = new Add_item();
+            Game_weaponlist_modifier_pg1 p = new Game_weaponlist_modifier_pg1();
             super.dispose();
             p.setVisible(false);
-            Add_potion r = new Add_potion();
-            r.setVisible(true);
-        }else if(this.jComboBox_itemType.getSelectedItem()=="Adventure"){
-            Add_item p = new Add_item();
-            super.dispose();
-            p.setVisible(false);
-            Add_adventure r = new Add_adventure();
-            r.setVisible(true);
-        }else if(this.jComboBox_itemType.getSelectedItem()=="Armor"){
-           Add_armor r = new Add_armor();
-           r.setName(n);
-           r.setCost(c);
-           r.setWeight(we);
-            super.dispose();
-            
-            r.setVisible(true);    
+            weaponlist_modifier_ranged r = new weaponlist_modifier_ranged();
+            r.setVisible(true);   
     }
     }//GEN-LAST:event_jButton_continueActionPerformed
 
@@ -254,28 +263,29 @@ public class Add_item extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Add_item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Game_weaponlist_modifier_pg1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Add_item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Game_weaponlist_modifier_pg1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Add_item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Game_weaponlist_modifier_pg1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Add_item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Game_weaponlist_modifier_pg1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Add_item().setVisible(true);
+                new Game_weaponlist_modifier_pg1().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_addCost;
+    private javax.swing.JButton jButton_addName;
+    private javax.swing.JButton jButton_addWeight;
     private javax.swing.JButton jButton_continue;
     private javax.swing.JButton jButton_quit;
     private javax.swing.JComboBox<String> jComboBox_itemType;
@@ -285,7 +295,6 @@ public class Add_item extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField_cost;
     private javax.swing.JTextField jTextField_itemname;

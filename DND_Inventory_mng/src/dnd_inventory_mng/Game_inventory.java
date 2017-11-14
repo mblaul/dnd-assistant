@@ -93,6 +93,8 @@ public class Game_inventory extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton_close.setBackground(new java.awt.Color(255, 51, 0));
+        jButton_close.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_close.setText("Close");
         jButton_close.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,12 +102,15 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
+        jButton_add_item.setBackground(new java.awt.Color(0, 204, 51));
+        jButton_add_item.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jButton_add_item.setText("Add Item");
         jButton_add_item.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_add_itemActionPerformed(evt);
             }
         });
+
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, jList_armorItemlist, org.jdesktop.beansbinding.ObjectProperty.create(), jList_armorItemlist, org.jdesktop.beansbinding.BeanProperty.create("elements"));
         bindingGroup.addBinding(binding);
