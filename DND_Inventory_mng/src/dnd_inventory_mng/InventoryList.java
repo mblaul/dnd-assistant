@@ -6,6 +6,7 @@
 package dnd_inventory_mng;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.io.IOException;
@@ -13,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.util.Iterator;
+import java.util.Scanner;
 
 
 
@@ -146,87 +150,117 @@ public class InventoryList {
         }
     }
    
-/*    public void BuildCharacterInventories(){
-        BufferedReader br = null;
-        
-        String charInventoryDir = ITEM_FILE_DIR + "characterinventories/";
-        String[] charType = {"Matt","Garret","Jesse","Mary","Stefen"};
+    
+    public void WriteCSV() throws IOException {
 
-        try
-        {
-            for(int i = 0; i+1 <= charType.length; i++){
-                String charTypeFile = charInventoryDir + charType[i] + ".csv";
-                String charCase = charType[i];
-                
-                //Opening the individual csv files
-                br = new BufferedReader(new FileReader(charTypeFile));
 
-                //Create List for holding Item objects
-                
+        String idFile = "Merged Files";
+        int numFiles = 5;
 
-                String line = "";
-                //Read to skip the header
-                br.readLine();
-                //Reading from the second line
-                while ((line = br.readLine()) != null) 
-                {
-                    String[] itemDetails = line.split(COMMA_DELIMITER);
-
-                    if(itemDetails.length > 0 )
-                    {
-                        switch(charCase){
-                            
-                            case "Armor":
-                            //Add the item details in Armor object
-                            Armor itemTemp0 = new Armor(Integer.parseInt(itemDetails[0]),
-                                    itemDetails[1],Integer.parseInt(itemDetails[2]),
-                                    Double.parseDouble(itemDetails[3]),Integer.parseInt(itemDetails[4]));
-                            armorItemList.add(itemTemp0);
-                            break;
-                            
-                        }        
-                    }
-                }
-            }
+        try {
+            mergeCsvFiles(idFile, numFiles);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        
-        catch(Exception ee)
-        {
-            ee.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                br.close();
-            }
-            catch(IOException ie)
-            {
-                System.out.println("Error occured while closing the BufferedReader");
-                ie.printStackTrace();
-            }
-        }
+
     }
+
     
-    
-    public void writeToCSV() throws FileNotFoundException{
-        PrintWriter pw = new PrintWriter(new File(ITEM_FILE_DIR));
-        StringBuilder sb = new StringBuilder();
+    private static void mergeCsvFiles(String idFile, int numFiles) throws IOException {
+
+        // Variables
+        ArrayList<File> files = new ArrayList<File>();
+        Iterator<File> iterFiles;
+        File fileOutput;
+        BufferedWriter fileWriter;
+        BufferedReader fileReader;
+        String csvFile = null;
+        String csvFinal = ITEM_FILE_DIR + idFile + ".csv";
+        String[] headers = null;
+        String header = null;
+
+        // Go through
+        // Go through values in order (ID(.getID()),Name,Value,Weight,Def) and write it line by line
+        // Make 
         
         
-        sb.append("id");
-        sb.append(',');
-        sb.append("Name");
-        sb.append('\n');
+        // Files: Input
+        for (int i = 1; i <= numFiles; i++){
+            
+            if (i == 1)
+            csvFile = ITEM_FILE_DIR + "Adventure.csv" ;
+            files.add(new File(csvFile));
+            
+            if (i == 2)
+            csvFile = ITEM_FILE_DIR + "Armor.csv" ;
+            files.add(new File(csvFile));
+            
+            if (i != 3)
+            csvFile = ITEM_FILE_DIR + "Melee.csv" ;
+            files.add(new File(csvFile));
+       
+            if (i != 4)
+            csvFile = ITEM_FILE_DIR + "Potion.csv" ;
+            files.add(new File(csvFile));
+            
+            if (i != 5)
+            csvFile = ITEM_FILE_DIR + "Ranged.csv" ;
+            files.add(new File(csvFile));
+            
+           
+        }
 
-        sb.append("1");
-        sb.append(',');
-        sb.append("Prashant Ghimire");
-        sb.append('\n');
+        // Files: Output
+        fileOutput = new File(csvFinal);
+        if (fileOutput.exists()) {
+            fileOutput.delete();
+        }
+        try {
+            fileOutput.createNewFile();
+            // log
+            // System.out.println("Output: " + fileOutput);
+        } catch (IOException e) {
+            // log
+        }
 
-        pw.write(sb.toString());
-        pw.close();
-        System.out.println("done!");    
-   }
-*/
+        iterFiles = files.iterator();
+        fileWriter = new BufferedWriter(new FileWriter(csvFinal, true));
+
+        // Headers
+        Scanner scanner = new Scanner(files.get(0));
+        if (scanner.hasNextLine())
+            header = scanner.nextLine();
+        // if (scanner.hasNextLine()) headers = scanner.nextLine().split(";");
+        scanner.close();
+
+        /*
+         * System.out.println(header); for(String s: headers){
+         * fileWriter.write(s); System.out.println(s); }
+         */
+
+        fileWriter.write(header);
+        fileWriter.newLine();
+
+        while (iterFiles.hasNext()) {
+
+            String line;// = null;
+            String[] firstLine;// = null;
+
+            File nextFile = iterFiles.next();
+            fileReader = new BufferedReader(new FileReader(nextFile));
+
+            if ((line = fileReader.readLine()) != null)
+                firstLine = line.split(";");
+
+            while ((line = fileReader.readLine()) != null) {
+                fileWriter.write(line);
+                fileWriter.newLine();
+            }
+            fileReader.close();
+        }
+
+        fileWriter.close();
+
+    }
+
 }    
