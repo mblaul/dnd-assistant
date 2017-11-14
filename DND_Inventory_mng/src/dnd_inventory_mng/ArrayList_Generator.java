@@ -19,17 +19,5 @@ public class ArrayList_Generator {
     public static List<Ranged> rangedItemList = new ArrayList<Ranged>();
     public static List<Potion> potionItemList = new ArrayList<Potion>();
     public static List<Adventure> adventureItemList = new ArrayList<Adventure>();
-    
-
-
         
-    //Build master inventory list using a method from the InventoryList class
-        //InventoryList masterInventory = new InventoryList();
-        //masterInventory.buildItemInventoryList(armorItemList,meleeItemList,rangedItemList,
-        //                          potionItemList,adventureItemList);
-        
-        
-        
-        //System.out.println(rangedItemList.get(1).getAttack());
-    
     }
