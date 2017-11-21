@@ -15,12 +15,10 @@ public class Game_inventory extends javax.swing.JFrame {
     /**
      * Creates new form Game_inventory
      */
-//<<<<<<< HEAD
+
     
-//=======
     private JList<String> itemJList;
    
-//>>>>>>> 6a71f19027d82264f18363986583ffda8d4c2a98
     
     public Game_inventory() {
        
@@ -111,7 +109,6 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
-
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, jList_armorItemlist, org.jdesktop.beansbinding.ObjectProperty.create(), jList_armorItemlist, org.jdesktop.beansbinding.BeanProperty.create("elements"));
         bindingGroup.addBinding(binding);
 
@@ -155,8 +152,7 @@ public class Game_inventory extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

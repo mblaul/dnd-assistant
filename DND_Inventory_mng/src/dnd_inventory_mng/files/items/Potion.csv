@@ -1,4 +1,4 @@
-ID,Name,Value,Weight,Atk,Range,Stamina
-12000,Longbow,500,3.00,30,7,8
-12001,Shortbow,550,2.25,20,5,1
-12002,Crossbow,600,4.75,40,12,7
+ID,Name,Value,Weight,Mod,Attribute
+31000,Healing,500,3.00,30,Heal
+31001,Mana,550,2.25,20,Mana
+31002,Poison,600,4.75,40,Damage
