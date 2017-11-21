@@ -39,7 +39,6 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-
               <Component id="jButton_add_item" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jButton_close" min="-2" max="-2" attributes="0"/>
@@ -164,7 +163,6 @@
             </Container>
           </SubComponents>
         </Container>
-
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -210,7 +208,7 @@
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList&lt;&gt;(potionList)"/>
-                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="int k=0;&#xa;DefaultListModel potionList = new DefaultListModel();&#xa;            for(Potion e : ArrayList_Generator.potionItemList){&#xa;            potionList.addElement(ArrayList_Generator.potionItemList.get(k).getName());&#xa;            k++;&#xa;}"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="int k=0;&#xa;DefaultListModel potionList = new DefaultListModel();&#xa;            for(Potion e : ArrayList_Generator.potionItemList){&#xa;            potionList.addElement(ArrayList_Generator.potionItemList.get(k).getName());&#xa;            k++;&#xa;}&#xa;int z = ArrayList_Generator.potionItemList.size()-1;&#xa;System.out.println(z);&#xa;System.out.println(ArrayList_Generator.potionItemList.get(z).getName());"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
@@ -219,7 +217,6 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel1">
-
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Melee">
