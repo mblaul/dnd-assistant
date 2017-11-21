@@ -6,6 +6,7 @@
 package dnd_inventory_mng;
 
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
@@ -43,9 +44,11 @@ public class Game_inventory extends javax.swing.JFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jButton_close = new javax.swing.JButton();
         jButton_add_item = new javax.swing.JButton();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTabbedPane_itemType = new javax.swing.JTabbedPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         int i=0;
         DefaultListModel demoList = new DefaultListModel();
@@ -90,6 +93,14 @@ public class Game_inventory extends javax.swing.JFrame {
             q++;
         }
         jList_adventureItemList = new javax.swing.JList<>(adventureList);
+        jLabel_itemImg = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextArea_stats = new javax.swing.JTextArea();
+        jButton_view = new javax.swing.JButton();
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane6.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,13 +122,12 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
-
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, jList_armorItemlist, org.jdesktop.beansbinding.ObjectProperty.create(), jList_armorItemlist, org.jdesktop.beansbinding.BeanProperty.create("elements"));
         bindingGroup.addBinding(binding);
 
         jScrollPane2.setViewportView(jList_armorItemlist);
 
-        jTabbedPane1.addTab("Armor", jScrollPane2);
+        jTabbedPane_itemType.addTab("Armor", jScrollPane2);
 
         jList_rangedItemList.setModel(rangedList);
         jScrollPane3.setViewportView(jList_rangedItemList);
@@ -134,11 +144,11 @@ public class Game_inventory extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Ranged", jPanel2);
+        jTabbedPane_itemType.addTab("Ranged", jPanel2);
 
         jList_potionItemList.setModel(potionList);
         jScrollPane4.setViewportView(jList_potionItemList);
@@ -156,11 +166,11 @@ public class Game_inventory extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Potion", jPanel3);
+        jTabbedPane_itemType.addTab("Potion", jPanel3);
 
         jList_meleeItemList.setModel(meleeList);
         jScrollPane1.setViewportView(jList_meleeItemList);
@@ -177,11 +187,11 @@ public class Game_inventory extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Melee", jPanel1);
+        jTabbedPane_itemType.addTab("Melee", jPanel1);
 
         jList_adventureItemList.setModel(adventureList);
         jScrollPane5.setViewportView(jList_adventureItemList);
@@ -198,11 +208,24 @@ public class Game_inventory extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Adventure", jPanel4);
+        jTabbedPane_itemType.addTab("Adventure", jPanel4);
+
+        jTextArea_stats.setColumns(20);
+        jTextArea_stats.setRows(5);
+        jScrollPane7.setViewportView(jTextArea_stats);
+
+        jButton_view.setBackground(new java.awt.Color(0, 204, 51));
+        jButton_view.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
+        jButton_view.setText("View Stats");
+        jButton_view.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_viewActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -210,25 +233,45 @@ public class Game_inventory extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addGap(18, 18, 18)
+                .addComponent(jTabbedPane_itemType, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton_close, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton_add_item, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(jButton_close))
+                            .addComponent(jLabel_itemImg, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton_view)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton_add_item))
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton_add_item)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton_close)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton_add_item)
+                            .addComponent(jButton_view))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel_itemImg, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton_close)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTabbedPane_itemType)
+                        .addGap(15, 15, 15))))
         );
 
         bindingGroup.bind();
@@ -252,6 +295,38 @@ public class Game_inventory extends javax.swing.JFrame {
     private void jButton_closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_closeActionPerformed
         super.dispose();
     }//GEN-LAST:event_jButton_closeActionPerformed
+
+    private void jButton_viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_viewActionPerformed
+        int i;
+        switch(this.jTabbedPane_itemType.getSelectedIndex()){
+           case 0 :
+            i = this.jList_armorItemlist.getSelectedIndex();
+            this.jTextArea_stats.setText(ArrayList_Generator.armorItemList.get(i).toString());
+            this.jLabel_itemImg.setIcon(new ImageIcon(this.getClass().getResource("/images/Ironhelmetbgcl.jpg")));
+            break;
+           case 1 :
+            i = this.jList_rangedItemList.getSelectedIndex();
+            this.jTextArea_stats.setText(ArrayList_Generator.rangedItemList.get(i).toString());
+            this.jLabel_itemImg.setIcon(new ImageIcon(this.getClass().getResource("/images/longbowbgcl copy.jpg")));
+            break;
+           case 2 :
+            i = this.jList_potionItemList.getSelectedIndex();
+            this.jTextArea_stats.setText(ArrayList_Generator.potionItemList.get(i).toString());
+            this.jLabel_itemImg.setIcon(new ImageIcon(this.getClass().getResource("/images/potioncl copy.jpg")));
+            break;
+           case 3 :
+            i = this.jList_meleeItemList.getSelectedIndex();
+            this.jTextArea_stats.setText(ArrayList_Generator.meleeItemList.get(i).toString());
+            this.jLabel_itemImg.setIcon(new ImageIcon(this.getClass().getResource("/images/warhammerbgcl copy.jpg")));
+            break;
+           case 4 :
+            i = this.jList_adventureItemList.getSelectedIndex();
+            this.jTextArea_stats.setText(ArrayList_Generator.adventureItemList.get(i).toString());
+            this.jLabel_itemImg.setIcon(new ImageIcon(this.getClass().getResource("/images/shieldbgcl copy.jpg")));
+            break;
+            
+       }
+    }//GEN-LAST:event_jButton_viewActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,6 +366,8 @@ public class Game_inventory extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_add_item;
     private javax.swing.JButton jButton_close;
+    private javax.swing.JButton jButton_view;
+    private javax.swing.JLabel jLabel_itemImg;
     private javax.swing.JList<String> jList_adventureItemList;
     private javax.swing.JList<String> jList_armorItemlist;
     private javax.swing.JList<String> jList_meleeItemList;
@@ -305,7 +382,11 @@ public class Game_inventory extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JTabbedPane jTabbedPane_itemType;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea_stats;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
