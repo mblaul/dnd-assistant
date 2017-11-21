@@ -132,7 +132,7 @@ public class Add_potion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    int id,cost,weight,mod;
+    int cost,weight,mod;
     String attr,name;
     public String getName() {
         return name;
@@ -164,7 +164,7 @@ public class Add_potion extends javax.swing.JFrame {
     private void jButton_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_saveActionPerformed
         mod = Integer.parseInt(this.jTextField_modifier.getText());
         attr = this.jComboBox_attribute.getSelectedItem().toString();
-        Potion potion1 = new Potion(id,name,cost,weight,mod,attr);
+        Potion potion1 = new Potion(0,name,cost,weight,mod,attr);
         ArrayList_Generator.potionItemList.add(potion1);
         super.dispose();
     }//GEN-LAST:event_jButton_saveActionPerformed
