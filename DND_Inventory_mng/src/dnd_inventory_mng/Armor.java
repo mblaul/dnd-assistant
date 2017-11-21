@@ -36,6 +36,7 @@ public class Armor extends Item {
     public String toString(){
         return "Item: "+getName()+
                 "\nCost: "+getCost()+"gp"+
-                "\nWeight: "+getWeight()+"lbs";
-    }
+                "\nWeight: "+getWeight()+"lbs"+
+                "\n:Defense "+getDefense();
+   }
 }

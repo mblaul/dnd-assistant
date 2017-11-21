@@ -45,6 +45,9 @@ public class Melee extends Weapon {
     public String toString(){
         return "Item: "+getName()+
                 "\nCost: "+getCost()+"gp"+
-                "\nWeight: "+getWeight()+"lbs";
+                "\nWeight: "+getWeight()+"lbs"+
+                "\nAttack: "+getAttack()+
+                "\nStrength: "+getStrength()+
+                "\nStamina: "+getStamina();
     }
 }

@@ -45,6 +45,7 @@ public class Potion extends Item {
     public String toString(){
         return "Item: "+getName()+
                 "\nCost: "+getCost()+"gp"+
-                "\nWeight: "+getWeight()+"lbs";
+                "\nWeight: "+getWeight()+"lbs"+
+                "\nEffect: +"+getModifier()+" to "+getAttribute();
     }
 }

@@ -22,7 +22,7 @@ public class Adventure extends Item {
         this.attr=attribute;
     }
 
-    public int isModifier() {
+    public int getModifier() {
         return mod;
     }
     
@@ -47,6 +47,8 @@ public class Adventure extends Item {
     public String toString(){
         return "Item: "+getName()+
                 "\nCost: "+getCost()+"gp"+
-                "\nWeight: "+getWeight()+"lbs";
+                "\nWeight: "+getWeight()+"lbs"+
+                "\nEffect: +"+getModifier()+" to "+getAttribute();
+                
     }
 }

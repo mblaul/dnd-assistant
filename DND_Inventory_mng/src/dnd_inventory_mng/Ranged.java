@@ -43,7 +43,10 @@ public class Ranged extends Weapon {
         public String toString(){
             return "Item: "+getName()+
                     "\nCost: "+getCost()+"gp"+
-                    "\nWeight: "+getWeight()+"lbs";
+                    "\nWeight: "+getWeight()+"lbs"+
+                    "\nAttack: "+getAttack()+
+                    "\nRange: "+getRange()+
+                    "\nStamina: "+getStamina();
         }
 }
 
