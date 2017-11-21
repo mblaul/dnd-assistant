@@ -109,6 +109,12 @@ public class Game_inventory extends javax.swing.JFrame {
             }
         });
 
+        jTabbedPane1.setBackground(new java.awt.Color(204, 255, 204));
+        jTabbedPane1.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
+
+        jList_armorItemlist.setBackground(new java.awt.Color(102, 204, 255));
+        jList_armorItemlist.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
+
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, jList_armorItemlist, org.jdesktop.beansbinding.ObjectProperty.create(), jList_armorItemlist, org.jdesktop.beansbinding.BeanProperty.create("elements"));
         bindingGroup.addBinding(binding);
 
@@ -116,6 +122,8 @@ public class Game_inventory extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Armor", jScrollPane2);
 
+        jList_rangedItemList.setBackground(new java.awt.Color(255, 153, 0));
+        jList_rangedItemList.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jList_rangedItemList.setModel(rangedList);
         jScrollPane3.setViewportView(jList_rangedItemList);
 
@@ -131,12 +139,14 @@ public class Game_inventory extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("Ranged", jPanel2);
 
+        jList_potionItemList.setBackground(new java.awt.Color(255, 102, 102));
+        jList_potionItemList.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jList_potionItemList.setModel(potionList);
         jScrollPane4.setViewportView(jList_potionItemList);
 
@@ -152,12 +162,15 @@ public class Game_inventory extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("Potion", jPanel3);
 
+        jList_meleeItemList.setBackground(new java.awt.Color(204, 204, 255));
+        jList_meleeItemList.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jList_meleeItemList.setModel(meleeList);
         jScrollPane1.setViewportView(jList_meleeItemList);
 
@@ -173,12 +186,14 @@ public class Game_inventory extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("Melee", jPanel1);
 
+        jList_adventureItemList.setBackground(new java.awt.Color(204, 255, 204));
+        jList_adventureItemList.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 16)); // NOI18N
         jList_adventureItemList.setModel(adventureList);
         jScrollPane5.setViewportView(jList_adventureItemList);
 
@@ -194,7 +209,7 @@ public class Game_inventory extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
