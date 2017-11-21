@@ -73,7 +73,15 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Group type="102" attributes="0">
+=======
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jButton_add_item" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButton_close" min="-2" max="-2" attributes="0"/>
+>>>>>>> 8ae4ef84c03be3822593efea645e32b634ca7201
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -127,7 +135,19 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_add_itemActionPerformed"/>
       </Events>
     </Component>
+<<<<<<< HEAD
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane_itemType">
+=======
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Copperplate Gothic Light" size="16" style="0"/>
+        </Property>
+      </Properties>
+>>>>>>> 8ae4ef84c03be3822593efea645e32b634ca7201
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -146,6 +166,14 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
             <Component class="javax.swing.JList" name="jList_armorItemlist">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="66" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Copperplate Gothic Light" size="16" style="0"/>
+                </Property>
+              </Properties>
               <BindingProperties>
                 <BindingProperty name="elements" source="jList_armorItemlist" target="jList_armorItemlist" targetPath="elements" updateStrategy="1" immediately="false"/>
               </BindingProperties>
@@ -179,7 +207,11 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                       <Component id="jScrollPane3" pref="383" max="32767" attributes="0"/>
+=======
+                      <Component id="jScrollPane3" pref="196" max="32767" attributes="0"/>
+>>>>>>> 8ae4ef84c03be3822593efea645e32b634ca7201
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -195,6 +227,12 @@
               <SubComponents>
                 <Component class="javax.swing.JList" name="jList_rangedItemList">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="99" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Copperplate Gothic Light" size="16" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection code="rangedList" type="code"/>
                     </Property>
@@ -232,7 +270,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
+<<<<<<< HEAD
                       <Component id="jScrollPane4" pref="377" max="32767" attributes="0"/>
+=======
+                      <Component id="jScrollPane4" pref="180" max="32767" attributes="0"/>
+>>>>>>> 8ae4ef84c03be3822593efea645e32b634ca7201
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -248,13 +290,19 @@
               <SubComponents>
                 <Component class="javax.swing.JList" name="jList_potionItemList">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="66" green="66" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Copperplate Gothic Light" size="16" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection code="potionList" type="code"/>
                     </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList&lt;&gt;(potionList)"/>
-                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="int k=0;&#xa;DefaultListModel potionList = new DefaultListModel();&#xa;            for(Potion e : ArrayList_Generator.potionItemList){&#xa;            potionList.addElement(ArrayList_Generator.potionItemList.get(k).getName());&#xa;            k++;&#xa;}"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="int k=0;&#xa;DefaultListModel potionList = new DefaultListModel();&#xa;            for(Potion e : ArrayList_Generator.potionItemList){&#xa;            potionList.addElement(ArrayList_Generator.potionItemList.get(k).getName());&#xa;            k++;&#xa;}&#xa;int z = ArrayList_Generator.potionItemList.size()-1;&#xa;System.out.println(z);&#xa;System.out.println(ArrayList_Generator.potionItemList.get(z).getName());"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
@@ -284,7 +332,11 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                       <Component id="jScrollPane1" pref="383" max="32767" attributes="0"/>
+=======
+                      <Component id="jScrollPane1" pref="196" max="32767" attributes="0"/>
+>>>>>>> 8ae4ef84c03be3822593efea645e32b634ca7201
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -300,6 +352,12 @@
               <SubComponents>
                 <Component class="javax.swing.JList" name="jList_meleeItemList">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Copperplate Gothic Light" size="16" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection code="meleeList" type="code"/>
                     </Property>
@@ -336,7 +394,11 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                       <Component id="jScrollPane5" pref="383" max="32767" attributes="0"/>
+=======
+                      <Component id="jScrollPane5" pref="196" max="32767" attributes="0"/>
+>>>>>>> 8ae4ef84c03be3822593efea645e32b634ca7201
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -352,6 +414,12 @@
               <SubComponents>
                 <Component class="javax.swing.JList" name="jList_adventureItemList">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="ff" red="cc" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Copperplate Gothic Light" size="16" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection code="adventureList" type="code"/>
                     </Property>

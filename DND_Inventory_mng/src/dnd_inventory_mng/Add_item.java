@@ -215,17 +215,19 @@ public class Add_item extends javax.swing.JFrame {
             r.setVisible(true);
             super.dispose();
         }else if(this.jComboBox_itemType.getSelectedItem()=="Potion"){
-            Add_item p = new Add_item();
+            Add_potion p = new Add_potion();
+            p.setName(n);
+            p.setCost(c);
+            p.setWeight(we);
+            p.setVisible(true);
             super.dispose();
-            p.setVisible(false);
-            Add_potion r = new Add_potion();
-            r.setVisible(true);
         }else if(this.jComboBox_itemType.getSelectedItem()=="Adventure"){
-            Add_item p = new Add_item();
+            Add_adventure p = new Add_adventure();
+            p.setName(n);
+            p.setCost(c);
+            p.setWeight(we);
+            p.setVisible(true);
             super.dispose();
-            p.setVisible(false);
-            Add_adventure r = new Add_adventure();
-            r.setVisible(true);
         }else if(this.jComboBox_itemType.getSelectedItem()=="Armor"){
            Add_armor r = new Add_armor();
            r.setName(n);
