@@ -69,6 +69,9 @@ public class Game_inventory extends javax.swing.JFrame {
             potionList.addElement(ArrayList_Generator.potionItemList.get(k).getName());
             k++;
         }
+        int z = ArrayList_Generator.potionItemList.size()-1;
+        System.out.println(z);
+        System.out.println(ArrayList_Generator.potionItemList.get(z).getName());
         jList_potionItemList = new javax.swing.JList<>(potionList);
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -163,7 +166,11 @@ public class Game_inventory extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+=======
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+>>>>>>> 3540291aaae9fe7d34f732c4d3b0d74f71fce06f
                 .addContainerGap())
         );
 

@@ -236,7 +236,7 @@
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList&lt;&gt;(potionList)"/>
-                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="int k=0;&#xa;DefaultListModel potionList = new DefaultListModel();&#xa;            for(Potion e : ArrayList_Generator.potionItemList){&#xa;            potionList.addElement(ArrayList_Generator.potionItemList.get(k).getName());&#xa;            k++;&#xa;}"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="int k=0;&#xa;DefaultListModel potionList = new DefaultListModel();&#xa;            for(Potion e : ArrayList_Generator.potionItemList){&#xa;            potionList.addElement(ArrayList_Generator.potionItemList.get(k).getName());&#xa;            k++;&#xa;}&#xa;int z = ArrayList_Generator.potionItemList.size()-1;&#xa;System.out.println(z);&#xa;System.out.println(ArrayList_Generator.potionItemList.get(z).getName());"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
