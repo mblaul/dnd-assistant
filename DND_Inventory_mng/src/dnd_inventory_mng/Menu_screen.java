@@ -139,7 +139,8 @@ public class Menu_screen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_inventoryActionPerformed
 
     private void jButton_charactersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_charactersActionPerformed
-        // TODO add your handling code here:
+        Character_viewer c = new Character_viewer();
+        c.setVisible(true);
     }//GEN-LAST:event_jButton_charactersActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

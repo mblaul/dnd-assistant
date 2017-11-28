@@ -166,7 +166,16 @@ public class Character_sheet extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+        
+        String name;
+        int hel,mag,agl,str,chr,intl,lck;
+        Armor hArmor = ArrayList_Generator.armorItemList.get(0);
+        Armor uArmor = ArrayList_Generator.armorItemList.get(1);
+        Armor lArmor = ArrayList_Generator.armorItemList.get(2);
+        Weapon wep = ArrayList_Generator.meleeItemList.get(0);
+        Potion pot = ArrayList_Generator.potionItemList.get(0);
+        Adventure adv = ArrayList_Generator.adventureItemList.get(0);
+        
     private void jButton_closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_closeActionPerformed
         super.dispose();
     }//GEN-LAST:event_jButton_closeActionPerformed
@@ -180,8 +189,17 @@ public class Character_sheet extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField_charismaActionPerformed
 
     private void jButton_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_saveActionPerformed
-        
-        ArrayList_Generator.characterList.add(e);
+        name=this.jTextField_name.getText();
+        hel=Integer.parseInt(this.jTextField_health.getText());
+        mag=Integer.parseInt(this.jTextField_magic.getText());
+        agl=Integer.parseInt(this.jTextField_agility.getText());
+        str=Integer.parseInt(this.jTextField_strength.getText());
+        chr=Integer.parseInt(this.jTextField_charisma.getText());
+        intl=Integer.parseInt(this.jTextField_intelligence.getText());
+        lck=Integer.parseInt(this.jTextField_luck.getText());
+        Character char1 = new Character(1,name,hel,mag,agl,str,chr,intl,lck,hArmor,uArmor,lArmor,wep,pot,adv);
+        ArrayList_Generator.characterList.add(char1);
+        super.dispose();
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**
