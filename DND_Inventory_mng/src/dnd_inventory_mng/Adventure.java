@@ -12,6 +12,7 @@ package dnd_inventory_mng;
 public class Adventure extends Item {
     private int mod;
     private String attr;
+    
     public Adventure(){
         super();
     }
@@ -22,6 +23,14 @@ public class Adventure extends Item {
         this.attr=attribute;
     }
 
+    public void setAttribute(String attribute) {
+        this.attr = attribute;
+    }
+
+    public void setModifier(int mod) {
+        this.mod = mod;
+    }
+    
     public int getModifier() {
         return mod;
     }
@@ -30,13 +39,6 @@ public class Adventure extends Item {
         return attr;
     }
 
-    public void setAttribute(String attribute) {
-        this.attr = attribute;
-    }
-
-    public void setModifier(int mod) {
-        this.mod = mod;
-    }
 
 
 
