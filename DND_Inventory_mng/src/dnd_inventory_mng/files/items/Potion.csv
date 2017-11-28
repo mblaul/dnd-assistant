@@ -1,4 +1,4 @@
-ID,Name,Value,Weight,Atk,Range,Stamina
-12000,Longbow,500,3.00,30,7,8
-12001,Shortbow,550,2.25,20,5,1
-12002,Crossbow,600,4.75,40,12,7
+ID,Name,Value,Weight,Modifier,Attribute
+31000,Health Potion,300,3.00,30,Health
+31001,Mana Potion,100,2.25,20,Magic
+31002,Poison Potion,200,4.75,-40,Health

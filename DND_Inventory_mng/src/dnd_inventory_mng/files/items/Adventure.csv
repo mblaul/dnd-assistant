@@ -1,4 +1,4 @@
-ID,Name,Value,Weight,Atk,Range,Stamina
-12000,Longbow,500,3.00,30,7,8
-12001,Shortbow,550,2.25,20,5,1
-12002,Crossbow,600,4.75,40,12,7
+ID,Name,Value,Weight,Modifier,Attribute
+41000,Grappling Hook,1000,5.00,1,25,Agility
+41001,Map,100,1,25,20,20,Intelligence
+42002,Fairy Dust,600,2,15,Charisma

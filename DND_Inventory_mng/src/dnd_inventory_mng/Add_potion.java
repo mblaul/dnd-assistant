@@ -134,6 +134,7 @@ public class Add_potion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     int cost,weight,mod;
     String attr,name;
+    
     public String getName() {
         return name;
     }
