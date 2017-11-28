@@ -155,9 +155,9 @@ public class Start_screen extends javax.swing.JFrame {
         masterInventory.buildItemInventoryList(ArrayList_Generator.armorItemList,ArrayList_Generator.meleeItemList,ArrayList_Generator.rangedItemList,
                                   ArrayList_Generator.potionItemList,ArrayList_Generator.adventureItemList);
                                     
-        System.out.println(ArrayList_Generator.armorItemList.get(1).toString());
         
-        //System.out.println(rangedItemList.get(1).getAttack());
+        
+        
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

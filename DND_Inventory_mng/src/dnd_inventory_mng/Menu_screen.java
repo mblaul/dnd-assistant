@@ -144,7 +144,9 @@ public class Menu_screen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_charactersActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        Skill_Check sc = new Skill_Check();
+        sc.setVisible(true);
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton_quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitActionPerformed

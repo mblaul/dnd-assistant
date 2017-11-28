@@ -80,12 +80,12 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField_helm" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="jTextField_upper" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="jTextField_lower" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="jTextField_weapon" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="jTextField_potion" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="jTextField_adventure" min="-2" pref="75" max="-2" attributes="0"/>
+                                  <Component id="jTextField_helm" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="jTextField_upper" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="jTextField_lower" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="jTextField_weapon" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="jTextField_potion" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="jTextField_adventure" min="-2" pref="125" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
