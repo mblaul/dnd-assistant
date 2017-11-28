@@ -19,5 +19,6 @@ public class ArrayList_Generator {
     public static List<Ranged> rangedItemList = new ArrayList<Ranged>();
     public static List<Potion> potionItemList = new ArrayList<Potion>();
     public static List<Adventure> adventureItemList = new ArrayList<Adventure>();
+    public static List<Character> characterList = new ArrayList<Character>();
         
     }
