@@ -292,6 +292,7 @@ public class Game_inventory extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
     
     private void jButton_add_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_add_itemActionPerformed
         Add_item p = new Add_item();
@@ -301,6 +302,7 @@ public class Game_inventory extends javax.swing.JFrame {
             JList thingy =(JList) jScrollPane2.getViewport().getView();thingy.setListData(thinglist);
             thingy.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             JScrollPane jScrollPane2 = new JScrollPane(thingy);
+            super.dispose();
             
            
     }//GEN-LAST:event_jButton_add_itemActionPerformed

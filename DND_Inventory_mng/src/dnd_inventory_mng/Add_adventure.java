@@ -165,6 +165,8 @@ public class Add_adventure extends javax.swing.JFrame {
        Adventure adventure1 = new Adventure(0,name,cost,weight,mod,attr);
        ArrayList_Generator.adventureItemList.add(adventure1);
        super.dispose();
+       Game_inventory g = new Game_inventory();
+       g.setVisible(true);
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**

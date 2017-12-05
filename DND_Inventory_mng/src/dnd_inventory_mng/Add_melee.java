@@ -179,6 +179,8 @@ public class Add_melee extends javax.swing.JFrame {
         Melee melee1 = new Melee(0,name,cost,weight,atk,str,stm);
         ArrayList_Generator.meleeItemList.add(melee1);
         super.dispose();
+        Game_inventory g = new Game_inventory();
+        g.setVisible(true);
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**

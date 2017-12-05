@@ -158,6 +158,8 @@ public class Add_armor extends javax.swing.JFrame {
         //ArrayList_Generator gen = new ArrayList_Generator();
         ArrayList_Generator.armorItemList.add(armor1);
         super.dispose();
+        Game_inventory g = new Game_inventory();
+        g.setVisible(true);
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     private void jButton_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_exitActionPerformed

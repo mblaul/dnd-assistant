@@ -179,6 +179,8 @@ public class Add_ranged extends javax.swing.JFrame {
         Ranged ranged1 = new Ranged(0,name,cost,weight,atk,rng,stm);
         ArrayList_Generator.rangedItemList.add(ranged1);
         super.dispose();
+        Game_inventory g = new Game_inventory();
+        g.setVisible(true);
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**

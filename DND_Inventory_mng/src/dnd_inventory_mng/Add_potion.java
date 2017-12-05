@@ -168,6 +168,8 @@ public class Add_potion extends javax.swing.JFrame {
         Potion potion1 = new Potion(0,name,cost,weight,mod,attr);
         ArrayList_Generator.potionItemList.add(potion1);
         super.dispose();
+        Game_inventory g = new Game_inventory();
+        g.setVisible(true);
     }//GEN-LAST:event_jButton_saveActionPerformed
 
     /**
